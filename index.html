@@ -134,27 +134,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Synchronized原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2021-06-01T05:37:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h3><h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><h3 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h3>
+        <h3 id="Synchronized原理"><a href="#Synchronized原理" class="headerlink" title="Synchronized原理"></a>Synchronized原理</h3><h3 id="1、Synchronized使用"><a href="#1、Synchronized使用" class="headerlink" title="1、Synchronized使用"></a>1、Synchronized使用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//synchronized代码块</span></span><br><span class="line"><span class="keyword">synchronized</span> (SynchronizedTest.class)&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;进入同步代码块&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//synchronized代码方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">testFun</span><span class="params">()</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;进入同步方法&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>字节码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SynchronizedTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">synchronized</span> (SynchronizedTest.class)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;进入同步代码块&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/06/01/Synchronized%E5%8E%9F%E7%90%86/#more">more >></a>
+        
       
 
       
@@ -166,7 +158,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/01/Synchronized%E5%8E%9F%E7%90%86/">展开全文 >></a>
         </p>
       
 
@@ -196,40 +188,15 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-CAS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/01/hello-world/" class="archive-article-date">
-  	<time datetime="2021-06-01T05:28:16.067Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+        <h2 id="CAS问题"><a href="#CAS问题" class="headerlink" title="CAS问题"></a>CAS问题</h2><h3 id="1、共享资源的访问"><a href="#1、共享资源的访问" class="headerlink" title="1、共享资源的访问"></a>1、共享资源的访问</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Account</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">///查询钱</span></span><br><span class="line">    <span class="function">Integer <span class="title">getBalance</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//取钱</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">withDraw</span><span class="params">(Integer amount)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置一个静态方法，设置1000个线程  每个线程取钱</span></span><br><span class="line">    <span class="comment">///在控制台打印余额和耗时</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">demo</span><span class="params">(Account account)</span></span>&#123;</span><br><span class="line">        List&lt;Thread&gt; ts = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">            ts.add(<span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                account.withDraw(<span class="number">10</span>);</span><br><span class="line">            &#125;));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">long</span> start = System.nanoTime();</span><br><span class="line">        ts.forEach(Thread::start);</span><br><span class="line">        ts.forEach(t -&gt; &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                t.join();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">long</span> end = System.nanoTime();</span><br><span class="line">        System.out.println(<span class="string">&quot;余额还有：&quot;</span> + account.getBalance() + <span class="string">&quot;   cost：&quot;</span> + (end-start)/<span class="number">1000_100</span> + <span class="string">&quot; ms&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/06/01/CAS/#more">more >></a>
+        
       
 
       
@@ -241,7 +208,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/01/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/01/CAS/">展开全文 >></a>
         </p>
       
 
@@ -271,92 +238,404 @@
 
 
   
-    <article id="post-Docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-volatile" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>docker中文网：<a target="_blank" rel="noopener" href="https://vuepress.mirror.docker-practice.com/">https://vuepress.mirror.docker-practice.com/</a></p>
-<h4 id="1、-什么是Docker"><a href="#1、-什么是Docker" class="headerlink" title="1、 什么是Docker"></a>1、 什么是Docker</h4><h5 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h5><blockquote>
-<p>官方介绍：</p>
-<p>We have a complete container solution for you no matter who you are and where you are on your containerization journey</p>
-<p>我们为你提供了一个完整的容器解决方案，不管你是谁，不管你在哪，你都可以开启你的容器旅程。</p>
-<p>Docker就是容器技术</p>
+        <h2 id="Volatile"><a href="#Volatile" class="headerlink" title="Volatile"></a>Volatile</h2><p><code>vloatile关键字是Java虚拟机提供的最轻量级的同步机制</code>，本文介绍volatile的作用和底层实现原理。</p>
+<h3 id="1、volatile解决线程安全性问题"><a href="#1、volatile解决线程安全性问题" class="headerlink" title="1、volatile解决线程安全性问题"></a>1、volatile解决线程安全性问题</h3><p>我们说过，在多线程中存在竟态条件，会出现<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43203735/article/details/115800950">线程安全性问题</a></p>
+<p><code>volatile关键字作用是保证可见性和有序性，并不会保证原子性。</code></p>
+<h5 id="volatile可以解决可见性问题"><a href="#volatile可以解决可见性问题" class="headerlink" title="volatile可以解决可见性问题"></a>volatile可以解决可见性问题</h5>
+        
+          <a class="article-more-a" href="/2021/06/01/volatile/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/volatile/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-线程安全问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="线程安全问题"><a href="#线程安全问题" class="headerlink" title="线程安全问题"></a>线程安全问题</h2><h4 id="1-什么是线程安全"><a href="#1-什么是线程安全" class="headerlink" title="1. 什么是线程安全"></a>1. 什么是线程安全</h4><p><code>要编写线程安全的代码，其核心在于要对状态访问操作进行管理，特别是对共享(Shared)的、可变(Mutable)的状态的访问。</code></p>
+<p>共享：变量可以由多个线程同时访问。可变：变量的值在其生命周期内可以发生变化。</p>
+<p>一个对象是否是线程安全的，取决于他是否被多个线程同时访问。这指的是程序中访问对象的方式，而不是对想要实现的功能。要使得对象是线程安全的，需要采用同步机制来协同对对象可变状态的访问。</p>
+<h4 id="2-竟态条件"><a href="#2-竟态条件" class="headerlink" title="2. 竟态条件"></a>2. 竟态条件</h4><p><code>当某就算的正确性取决于多个线程的交替执行时序时，那么就会发生竟态条件。</code>最常见的竟态条件类型就是“先检查后执行”。即通过一个可能失效的观测结果来决定下一步的动作。</p>
+        
+          <a class="article-more-a" href="/2021/06/01/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-生产者与消费者" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="生产者消费者问题"><a href="#生产者消费者问题" class="headerlink" title="生产者消费者问题"></a>生产者消费者问题</h2><p><code>生产者与消费者问题是多线程同步问题的经典案例。也称有限缓冲问题。</code></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 什么是生产者消费者问题</span></span><br><span class="line">该问题描述了共享固定大小缓冲区的线程，生产者的主要作用是生成一定量的数据放到缓冲区，消费者也在缓冲区消耗这些数据。</span><br><span class="line">这类问题的关键在于保证生产者不会在缓冲区满时加入数据，消费者也不会下缓冲区空时消耗数据。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 如何解决这类问题</span></span><br><span class="line">生产者在缓冲区满时休眠，等到下次消费者消耗缓冲区中的数据的时候，生产者才能被唤醒，开始往缓冲区添加数据。</span><br><span class="line">同样，让消费者在缓冲区空时进入休眠，等到生产者往缓冲区添加数据之后，再唤醒消费者。</span><br><span class="line"></span><br><span class="line">通常采用进程间通信的方法解决该问题，常用的方法有信号灯法等。如果解决方法不够完善，则容易出现死锁的情况。出现死锁时，两个线程都会陷入休眠，等待对方唤醒自己</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/06/01/%E7%94%9F%E4%BA%A7%E8%80%85%E4%B8%8E%E6%B6%88%E8%B4%B9%E8%80%85/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/%E7%94%9F%E4%BA%A7%E8%80%85%E4%B8%8E%E6%B6%88%E8%B4%B9%E8%80%85/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java内存模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h2><p>​        <code>在并发程序中，涉及到操作系统的底层，因此我们很难去判断程序的执行是怎样的。同时涉及到多个线程对共享资源的访问。一致性和安全性将会受到严重挑战。所以，我们需要保证多个线程正确的协同工作。Java内存模型可以帮助我们解决这些问题。</code></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Java内存区域(结构)和Java内存模型</span></span><br><span class="line"><span class="bullet">1.</span> java内存区域和Java内存模型是两个不一样的东西。内存区域是指JVM运行时将数据分区域存储，强调与内存空间的划分。</span><br><span class="line"><span class="bullet">2.</span> Java内存模型时定义了线程和主内存之间的抽象关系，用来屏蔽各种硬件和操作系统的内存之间的访问差异。JMM定义了JVM在计算机内存中的工作方式。规范了Java虚拟机与计算机内存之间如何协同工作。Java内存模型跟CPU缓存模型类似，是基于CPU缓存模型来建立的。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Java内存模型的主要目标是定义程序中各个变量的访问规则，即在虚拟机中将变量存储到内存和从内存中取出变量这样的底层细节。此处的变量一定要是共享变量，比如实例字段，静态变量等。</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/06/01/java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-线程的通信" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="线程的其他方法"><a href="#线程的其他方法" class="headerlink" title="线程的其他方法"></a>线程的其他方法</h2><h3 id="1-终止线程"><a href="#1-终止线程" class="headerlink" title="1. 终止线程"></a>1. 终止线程</h3><p><code>一般来说线程的执行完毕就会结束，无需手动关闭。但当我们需要手动杀死一个正在运行的线程。可以通过一些方法。</code></p>
+<h4 id="stop方法-废弃"><a href="#stop方法-废弃" class="headerlink" title="stop方法(废弃)"></a>stop方法(废弃)</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># stop()方法不推荐使用</span></span><br><span class="line">因为stop()方法太暴力，会强制杀死线程。</span><br><span class="line"></span><br><span class="line">这就类似于: 你正在写文档，突然停电，文档没有保存。</span><br><span class="line">在程序运行过程中，强制杀死线程，线程还没有来得及保存上下文就结束了。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;i = &quot;</span> + i);</span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        thread.start();</span><br><span class="line">        System.out.println(<span class="string">&quot;线程开始执行&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">100</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        thread.stop();</span><br><span class="line">        System.out.println();</span><br><span class="line">        System.out.println(<span class="string">&quot;线程结束&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/06/01/%E7%BA%BF%E7%A8%8B%E7%9A%84%E9%80%9A%E4%BF%A1/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/%E7%BA%BF%E7%A8%8B%E7%9A%84%E9%80%9A%E4%BF%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-创建线程的方式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="创建线程的方式"><a href="#创建线程的方式" class="headerlink" title="创建线程的方式"></a>创建线程的方式</h2><h4 id="1、Thread类构造方法"><a href="#1、Thread类构造方法" class="headerlink" title="1、Thread类构造方法"></a>1、Thread类构造方法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Thread类源码</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(ThreadGroup g, Runnable target, String name,</span></span></span><br><span class="line"><span class="params"><span class="function"> <span class="keyword">long</span> stackSize, AccessControlContext acc,</span></span></span><br><span class="line"><span class="params"><span class="function"> <span class="keyword">boolean</span> inheritThreadLocals)</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">我们解释在初始化方法中的参数：</span><br><span class="line">ThreadGroup g           线程组，指定这个线程是在哪个线程组下</span><br><span class="line">Runnable    target      指定要执行的任务</span><br><span class="line">String      name        线程的名字，多个线程的名字是可以重复的。</span><br><span class="line"></span><br><span class="line">AccessControlContext acc        用于初始化变量inheritedAccessControlContext</span><br><span class="line">boolean inheritThreadLocals     可继承的ThreadLocal</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/06/01/%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/%E5%88%9B%E5%BB%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%96%B9%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-多线程基本概念" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="多线程中的几个概念"><a href="#多线程中的几个概念" class="headerlink" title="多线程中的几个概念"></a>多线程中的几个概念</h4><p>1、 线程的进程的区别</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">每个正在运行系统上运行的程序都是一个进程。每个进程中包含一到多个线程。</span><br><span class="line"></span><br><span class="line">线程是一组指令的集合，或者是程序的特殊段，它可以在程序中独立执行。也可以把它理解为代码运行的上下文。因此线程基本上是轻量级的进程，它负责在单个程序中执行多任务。</span><br><span class="line"></span><br><span class="line">进程是所有线程的集合，每一个线程是进程中的一条执行路径。</span><br></pre></td></tr></table></figure>
+
+<p>2、 并发(Concurrency)和并行(Parallelism)</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">无论是单CPU还是多CPU，操作系统都营造出了同时运行多个程序的假象。实际的过程是CPU的快速切换。</span><br><span class="line"></span><br><span class="line">并发和并行都是多个进程同时运行。</span><br><span class="line"></span><br><span class="line">并发说的是在一个时间段内，多件事情在这个时间段内交替执行。</span><br><span class="line">并行说的是多件事情在同一个时刻同事发生。</span><br></pre></td></tr></table></figure>
+
+<p>3、 同步(Synchronous)和异步(Asynchronous)</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">线程同步是多个线程访问同一资源，等待资源访问结束，浪费时间和CPU，效率低。</span><br><span class="line"><span class="bullet">-</span> 同步方法调用开始后，调用者必须等到方法调用返回后，才能继续执行之后的方法。</span><br><span class="line"></span><br><span class="line">线程异步是访问资源是在空闲等待是同时访问其他资源</span><br><span class="line"><span class="bullet">-</span> 异步方法调用更像是一次消息传递，一旦开始，方法调用就会立即返回，调用者就可以继续执行之后的方法</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/06/01/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-运行时数据区" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-什么是运行时数据区"><a href="#1-什么是运行时数据区" class="headerlink" title="1.什么是运行时数据区"></a>1.什么是运行时数据区</h3><blockquote>
+<p>Java虚拟机在执行Java程序的过程中，会涉及的数据划分到不同的内存区域去管理，而这部分区域就是运行时数据区。</p>
 </blockquote>
-<h5 id="docker的作用"><a href="#docker的作用" class="headerlink" title="docker的作用"></a>docker的作用</h5><ol>
-<li><p>在开发的时候，在本地测试环境可以跑，生产环境跑不起来。</p>
-<p>我们在一个Java web应用程序涉及很多东西，比如jdk，tomcat，mysql等软件环境。当这些软件的某一项版本不一致时候，可能就会导致应用程序跑不起来。Docker则将程序以及使用软件环境直接打包在一起，无论在哪个机器上保证了环境的一致。</p>
-<p><code>一致的运行环境，更轻松的迁移</code></p>
-</li>
-<li><p>服务器自己的程序挂了，结果发现是别人的程序出了问题把内存吃完了，自己程序因为内存不够挂了。</p>
-<p>这种也是一种常见的情况，你的服务器会跟公司其他人的程序共享一台服务器。所以不可避免受到其他程序的干扰。docker很好的解决了环境隔离的问题。</p>
-<p><code>对进程进行封装隔离，容器与容器之间互不影响，更高效的利用系统资源。</code></p>
-</li>
-<li><p>大量的流量，需要在多部署几十台服务器</p>
-<p>部署几十台服务器，可能服务器的环境还不是一致的。就会出现各种问题。如果用docker，我们只需要将程序打包到镜像，你要多少台服务器，极大提高了部署效率。</p>
-<p><code>通过镜像复制多个环境一致容器</code></p>
-</li>
-</ol>
-<h5 id="docker与虚拟机的区别"><a href="#docker与虚拟机的区别" class="headerlink" title="docker与虚拟机的区别"></a>docker与虚拟机的区别</h5><p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527201910.png" alt="image-20210527201902749"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210427110217.png" alt="image-20210427110217775"></p>
+<p>运行时数据区有5个区域。分别是：方法区，虚拟机栈，本地方法栈，堆，程序计数器。</p>
+<p>其中：这5个区域可以分成两类：线程私有，线程共享</p>
+<ul>
+<li>线程私有：虚拟机栈，本地方法栈，程序计数器</li>
+<li>线程共享：方法区，堆</li>
+</ul>
+<p>线程共享和线程私有的区别是：<strong>线程私有是跟随线程的启动而存在，线程共享是跟随虚拟机的启动而存在</strong></p>
 <blockquote>
-<p>虚拟机的缺点：</p>
-<ol>
-<li>虚拟机运行软件环境之前必须自身携带操作系统，本身很小的应用程序却因为携带了操作系统而变得非常大。很笨重。</li>
-<li>通过虚拟机在资源调度上经过很多步骤。</li>
-</ol>
+<p>线程是一个程序里的运行单元。JVM允许一个应用有多个线程并行的执行</p>
+<p>在Hotspot  JVM里，每个线程都与操作系统的本地线程直接映射。</p>
+<p>当一个Java线程准备好执行以后，此时一个操作系统的本地线程也同时创建。Java线程执行终止后，本地线程也会回收</p>
+<p>操作系统负责所有线程的安排调度到任何一个可用的CPU上，一旦本地线程初始化成功，它就会调用Java线程中的run()方法</p>
 </blockquote>
-<blockquote>
-<p>docker的优势：</p>
-<ol>
-<li>docker是不携带操作系统的，所以docker的应用非常轻巧。</li>
-</ol>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>传统虚拟机</th>
-<th>Docker容器</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>磁盘占用</td>
-<td>几个GB到几十个GB</td>
-<td>几十MB到几百MB</td>
-</tr>
-<tr>
-<td>CPU内存占用</td>
-<td>虚拟操作系统非常占用CPU和内存</td>
-<td>Docker引擎占用极低</td>
-</tr>
-<tr>
-<td>启动速度</td>
-<td>几分钟</td>
-<td>几秒</td>
-</tr>
-<tr>
-<td>安装管理</td>
-<td>需要专门的运维技术</td>
-<td>安装、管理方便</td>
-</tr>
-<tr>
-<td>应用部署</td>
-<td>每次部署都耗时费力</td>
-<td>第二次部署轻松便捷</td>
-</tr>
-<tr>
-<td>耦合性</td>
-<td>多个应用服务器安装到一起，容易互相影响</td>
-<td>每个应用服务器一个容器，达到隔离</td>
-</tr>
-<tr>
-<td>系统依赖</td>
-<td>无</td>
-<td>需要相同或相似的内核，Linux</td>
-</tr>
-</tbody></table>
         
-          <a class="article-more-a" href="/2021/05/29/Docker/#more">more >></a>
+          <a class="article-more-a" href="/2021/06/01/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/#more">more >></a>
         
       
 
@@ -369,7 +648,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/29/Docker/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/01/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/">展开全文 >></a>
         </p>
       
 
@@ -399,6 +678,10 @@
 
 
   
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 

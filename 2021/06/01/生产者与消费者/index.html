@@ -8,57 +8,19 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>Joy-J博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Dockerdocker中文网：https:&#x2F;&#x2F;vuepress.mirror.docker-practice.com&#x2F; 1、 什么是Docker什么是Docker 官方介绍： We have a complete container solution for you no matter who you are and where you are on your containerization">
+  <meta name="description" content="生产者消费者问题生产者与消费者问题是多线程同步问题的经典案例。也称有限缓冲问题。 1234# 什么是生产者消费者问题该问题描述了共享固定大小缓冲区的线程，生产者的主要作用是生成一定量的数据放到缓冲区，消费者也在缓冲区消耗这些数据。这类问题的关键在于保证生产者不会在缓冲区满时加入数据，消费者也不会下缓冲区空时消耗数据。  12345# 如何解决这类问题生产者在缓冲区满时休眠，等到下次消费者消耗缓冲区">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Joy-J博客">
-<meta property="og:url" content="http://example.com/2021/05/29/Docker/index.html">
+<meta property="og:url" content="http://example.com/2021/06/01/%E7%94%9F%E4%BA%A7%E8%80%85%E4%B8%8E%E6%B6%88%E8%B4%B9%E8%80%85/index.html">
 <meta property="og:site_name" content="Joy-J博客">
-<meta property="og:description" content="Dockerdocker中文网：https:&#x2F;&#x2F;vuepress.mirror.docker-practice.com&#x2F; 1、 什么是Docker什么是Docker 官方介绍： We have a complete container solution for you no matter who you are and where you are on your containerization">
+<meta property="og:description" content="生产者消费者问题生产者与消费者问题是多线程同步问题的经典案例。也称有限缓冲问题。 1234# 什么是生产者消费者问题该问题描述了共享固定大小缓冲区的线程，生产者的主要作用是生成一定量的数据放到缓冲区，消费者也在缓冲区消耗这些数据。这类问题的关键在于保证生产者不会在缓冲区满时加入数据，消费者也不会下缓冲区空时消耗数据。  12345# 如何解决这类问题生产者在缓冲区满时休眠，等到下次消费者消耗缓冲区">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527201910.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527133415.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527133809.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527134104.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527135624.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527141036.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527151007.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527153012.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527153517.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527145515.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527160713.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527160916.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527161639.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527162033.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527204555.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528125334.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528132841.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528133928.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528134124.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528134204.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528135042.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528140034.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528140149.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528140405.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528140654.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528141026.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528141428.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528142409.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528142453.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528193314.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528194234.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528194827.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528195619.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528200352.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528200907.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528201243.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528202247.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528202552.png">
-<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210528203139.png">
-<meta property="article:published_time" content="2021-05-29T01:09:01.919Z">
-<meta property="article:modified_time" content="2021-06-01T07:31:28.005Z">
+<meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210415095537.png">
+<meta property="article:published_time" content="2021-06-01T07:33:22.574Z">
+<meta property="article:modified_time" content="2021-06-01T07:35:27.820Z">
 <meta property="article:author" content="蒋志伟">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210527201910.png">
+<meta name="twitter:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210415095537.png">
   
     <link rel="alternative" href="/atom.xml" title="Joy-J博客" type="application/atom+xml">
   
@@ -176,364 +138,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Docker" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-生产者与消费者" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>docker中文网：<a target="_blank" rel="noopener" href="https://vuepress.mirror.docker-practice.com/">https://vuepress.mirror.docker-practice.com/</a></p>
-<h4 id="1、-什么是Docker"><a href="#1、-什么是Docker" class="headerlink" title="1、 什么是Docker"></a>1、 什么是Docker</h4><h5 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h5><blockquote>
-<p>官方介绍：</p>
-<p>We have a complete container solution for you no matter who you are and where you are on your containerization journey</p>
-<p>我们为你提供了一个完整的容器解决方案，不管你是谁，不管你在哪，你都可以开启你的容器旅程。</p>
-<p>Docker就是容器技术</p>
-</blockquote>
-<h5 id="docker的作用"><a href="#docker的作用" class="headerlink" title="docker的作用"></a>docker的作用</h5><ol>
-<li><p>在开发的时候，在本地测试环境可以跑，生产环境跑不起来。</p>
-<p>我们在一个Java web应用程序涉及很多东西，比如jdk，tomcat，mysql等软件环境。当这些软件的某一项版本不一致时候，可能就会导致应用程序跑不起来。Docker则将程序以及使用软件环境直接打包在一起，无论在哪个机器上保证了环境的一致。</p>
-<p><code>一致的运行环境，更轻松的迁移</code></p>
-</li>
-<li><p>服务器自己的程序挂了，结果发现是别人的程序出了问题把内存吃完了，自己程序因为内存不够挂了。</p>
-<p>这种也是一种常见的情况，你的服务器会跟公司其他人的程序共享一台服务器。所以不可避免受到其他程序的干扰。docker很好的解决了环境隔离的问题。</p>
-<p><code>对进程进行封装隔离，容器与容器之间互不影响，更高效的利用系统资源。</code></p>
-</li>
-<li><p>大量的流量，需要在多部署几十台服务器</p>
-<p>部署几十台服务器，可能服务器的环境还不是一致的。就会出现各种问题。如果用docker，我们只需要将程序打包到镜像，你要多少台服务器，极大提高了部署效率。</p>
-<p><code>通过镜像复制多个环境一致容器</code></p>
-</li>
-</ol>
+        <h2 id="生产者消费者问题"><a href="#生产者消费者问题" class="headerlink" title="生产者消费者问题"></a>生产者消费者问题</h2><p><code>生产者与消费者问题是多线程同步问题的经典案例。也称有限缓冲问题。</code></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 什么是生产者消费者问题</span></span><br><span class="line">该问题描述了共享固定大小缓冲区的线程，生产者的主要作用是生成一定量的数据放到缓冲区，消费者也在缓冲区消耗这些数据。</span><br><span class="line">这类问题的关键在于保证生产者不会在缓冲区满时加入数据，消费者也不会下缓冲区空时消耗数据。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 如何解决这类问题</span></span><br><span class="line">生产者在缓冲区满时休眠，等到下次消费者消耗缓冲区中的数据的时候，生产者才能被唤醒，开始往缓冲区添加数据。</span><br><span class="line">同样，让消费者在缓冲区空时进入休眠，等到生产者往缓冲区添加数据之后，再唤醒消费者。</span><br><span class="line"></span><br><span class="line">通常采用进程间通信的方法解决该问题，常用的方法有信号灯法等。如果解决方法不够完善，则容易出现死锁的情况。出现死锁时，两个线程都会陷入休眠，等待对方唤醒自己</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 
-<h5 id="docker与虚拟机的区别"><a href="#docker与虚拟机的区别" class="headerlink" title="docker与虚拟机的区别"></a>docker与虚拟机的区别</h5><p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527201910.png" alt="image-20210527201902749"></p>
-<blockquote>
-<p>虚拟机的缺点：</p>
-<ol>
-<li>虚拟机运行软件环境之前必须自身携带操作系统，本身很小的应用程序却因为携带了操作系统而变得非常大。很笨重。</li>
-<li>通过虚拟机在资源调度上经过很多步骤。</li>
-</ol>
-</blockquote>
-<blockquote>
-<p>docker的优势：</p>
-<ol>
-<li>docker是不携带操作系统的，所以docker的应用非常轻巧。</li>
-</ol>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>传统虚拟机</th>
-<th>Docker容器</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>磁盘占用</td>
-<td>几个GB到几十个GB</td>
-<td>几十MB到几百MB</td>
-</tr>
-<tr>
-<td>CPU内存占用</td>
-<td>虚拟操作系统非常占用CPU和内存</td>
-<td>Docker引擎占用极低</td>
-</tr>
-<tr>
-<td>启动速度</td>
-<td>几分钟</td>
-<td>几秒</td>
-</tr>
-<tr>
-<td>安装管理</td>
-<td>需要专门的运维技术</td>
-<td>安装、管理方便</td>
-</tr>
-<tr>
-<td>应用部署</td>
-<td>每次部署都耗时费力</td>
-<td>第二次部署轻松便捷</td>
-</tr>
-<tr>
-<td>耦合性</td>
-<td>多个应用服务器安装到一起，容易互相影响</td>
-<td>每个应用服务器一个容器，达到隔离</td>
-</tr>
-<tr>
-<td>系统依赖</td>
-<td>无</td>
-<td>需要相同或相似的内核，Linux</td>
-</tr>
-</tbody></table>
-<h4 id="2、-docker安装"><a href="#2、-docker安装" class="headerlink" title="2、 docker安装"></a>2、 docker安装</h4><p>通用所有的平台</p>
-<p>在测试或开发环境中，Docker官方为了简化安装流程，提供了一套便捷的安装脚本，Centos系统上可以使用这套脚本，另外可以通过<code>--mirror</code>选项来使用国内镜像源进行安装。</p>
-<p>执行这个命令后，脚本就会自动的将一切准备工作做好，并且把Docker的稳定版本安装在系统中。</p>
-<p>脚本：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL get.docker.com -o get-docker.sh</span><br><span class="line"></span><br><span class="line">sudo sh get-docker.sh --mirror Aliyun</span><br></pre></td></tr></table></figure>
 
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">桌上有一空盘，最多允许存放一个水果。爸爸可向盘中放一个水果或放一个橘子，儿子专等吃盘中的橘子。女儿专等吃苹果。</span><br><span class="line">试用P、V操作和Java程序实现爸爸，儿子，女儿三个并发进程的同步。</span><br></pre></td></tr></table></figure>
 
+<h4 id="P、V操作"><a href="#P、V操作" class="headerlink" title="P、V操作"></a>P、V操作</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">根据题意，我们知道父亲是生产者，儿子、女儿是消费者。盘中的水果是共享资源。</span><br><span class="line">因为盘中最多允许存放一个水果，在生产前需要判断是否为满。</span><br><span class="line"></span><br><span class="line">利用互斥信号量mutex实现互斥，利用empty信号量来判断盘中是否为空。</span><br><span class="line">利用or信号量和ap信号量来判断盘中的橘子和苹果的数量。</span><br><span class="line">两个函数判断是否是橘子或者苹果。put(or) put(ap)</span><br><span class="line"></span><br><span class="line">设置初始值：</span><br><span class="line">mutex = 1  empty = 1  or = 0  ap = 0</span><br></pre></td></tr></table></figure>
 
-<h4 id="3、docker的基本使用"><a href="#3、docker的基本使用" class="headerlink" title="3、docker的基本使用"></a>3、docker的基本使用</h4><h5 id="查看docker版本"><a href="#查看docker版本" class="headerlink" title="查看docker版本"></a>查看docker版本</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">三个进程</span><br><span class="line">父亲：</span><br><span class="line">P(empty)</span><br><span class="line">if(put(or))</span><br><span class="line"><span class="code">	V(or)</span></span><br><span class="line"><span class="code">else</span></span><br><span class="line"><span class="code">	V(ap)</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"></span><br><span class="line">儿子：</span><br><span class="line">P(or)</span><br><span class="line">V(empty)</span><br><span class="line"></span><br><span class="line">女儿：</span><br><span class="line">P(ap)</span><br><span class="line">v(empty)</span><br></pre></td></tr></table></figure>
 
-<h5 id="查看docker状态："><a href="#查看docker状态：" class="headerlink" title="查看docker状态："></a>查看docker状态：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status docker</span><br></pre></td></tr></table></figure>
 
-<h5 id="启动docker服务："><a href="#启动docker服务：" class="headerlink" title="启动docker服务："></a>启动docker服务：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
 
-<h5 id="停止docker服务："><a href="#停止docker服务：" class="headerlink" title="停止docker服务："></a>停止docker服务：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure>
+<h4 id="java程序"><a href="#java程序" class="headerlink" title="java程序"></a>java程序</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * empty 的取值有不同的意义：</span></span><br><span class="line"><span class="comment">     * 0  表示盘中无水果</span></span><br><span class="line"><span class="comment">     * 1  表示盘中的水果是橘子</span></span><br><span class="line"><span class="comment">     * 2  表示盘中的水果是苹果</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> empty = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//生产资源，，有生产者线程调用</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(empty != <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;盘中有水果，生产者正在等待&quot;</span>);</span><br><span class="line">                wait();</span><br><span class="line">            &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//此时盘中无水果</span></span><br><span class="line">        Random random = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">int</span> randomInt = random.nextInt(<span class="number">2</span>) + <span class="number">1</span>;</span><br><span class="line">        empty = randomInt;</span><br><span class="line">        <span class="keyword">if</span>(empty == <span class="number">1</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;爸爸放入橘子&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;爸爸放入苹果&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.notifyAll();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//消耗资源，有消费者线程调用</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(empty == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;盘中无水果，消费者等待&quot;</span>);</span><br><span class="line">                wait();</span><br><span class="line">            &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//此时盘中有水果</span></span><br><span class="line">        empty = <span class="number">0</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;盘中无水果&quot;</span>);</span><br><span class="line">        <span class="keyword">this</span>.notifyAll();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        Fruit fruit = <span class="keyword">new</span> Fruit();</span><br><span class="line"></span><br><span class="line">        Thread father = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">while</span>(<span class="keyword">true</span>)</span><br><span class="line">                    fruit.put();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        Thread daughter = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">                    <span class="keyword">while</span>(fruit.empty == <span class="number">2</span>)&#123;</span><br><span class="line">                        System.out.println(<span class="string">&quot;女儿拿到苹果&quot;</span>);</span><br><span class="line">                        fruit.get();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        Thread son = <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">while</span> (<span class="keyword">true</span>)&#123;</span><br><span class="line">                    <span class="keyword">while</span>(fruit.empty == <span class="number">1</span>)&#123;</span><br><span class="line">                        System.out.println(<span class="string">&quot;儿子拿到橘子&quot;</span>);</span><br><span class="line">                        fruit.get();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        son.start();</span><br><span class="line">        daughter.start();</span><br><span class="line">        father.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h5 id="重启docker服务："><a href="#重启docker服务：" class="headerlink" title="重启docker服务："></a>重启docker服务：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-<h5 id="查看docker信息："><a href="#查看docker信息：" class="headerlink" title="查看docker信息："></a>查看docker信息：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker info</span><br></pre></td></tr></table></figure>
-
-<h5 id="docker开机自启动"><a href="#docker开机自启动" class="headerlink" title="docker开机自启动"></a>docker开机自启动</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure>
-
-<h5 id="建立docker组，并使用root用户"><a href="#建立docker组，并使用root用户" class="headerlink" title="建立docker组，并使用root用户"></a>建立docker组，并使用root用户</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 创建docker组</span><br><span class="line">sudo groupadd docker</span><br><span class="line"># 将当前用户加入docker组</span><br><span class="line">sudo usermod -aG docker $USER</span><br><span class="line"># 重启docker服务</span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="4、docker核心概念和核心架构图"><a href="#4、docker核心概念和核心架构图" class="headerlink" title="4、docker核心概念和核心架构图"></a>4、docker核心概念和核心架构图</h4><h5 id="1-镜像-image"><a href="#1-镜像-image" class="headerlink" title="1. 镜像 image"></a>1. 镜像 image</h5><p>定义：<strong>一个镜像代表着一个软件</strong>。比如说mysql镜像、redis镜像、nginx镜像……</p>
-<h5 id="2-容器-container"><a href="#2-容器-container" class="headerlink" title="2.容器 container"></a>2.容器 container</h5><p>定义：<strong>基于某个镜像运行一次就会生成一个实例，这个实例称为一个容器。</strong></p>
-<h5 id="3-仓库-repository"><a href="#3-仓库-repository" class="headerlink" title="3. 仓库 repository"></a>3. 仓库 repository</h5><p>定义：<strong>用于存储docker中所有镜像的具体位置</strong>。</p>
-<p>远程仓库：docker在世界范围维护一个唯一的远程仓库</p>
-<p>本地仓库：当前自己机器中下载镜像存储位置</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527133415.png" alt="image-20210527133408757"></p>
-<p>例子：启动一个安装mysql 5.7 版本的容器</p>
-<ol>
-<li><p>打开docker hub   <a target="_blank" rel="noopener" href="https://registry.hub.docker.com/">https://registry.hub.docker.com/</a></p>
-</li>
-<li><p>选择mysql官方镜像，并选择版本5.7</p>
-</li>
-</ol>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527133809.png" alt="image-20210527133809903"></p>
-<ol start="3">
-<li><p>启动docker</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure></li>
-<li><p>拉取docker</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.7</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527134104.png" alt="image-20210527134104009"></p>
-</li>
-</ol>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527135624.png" alt="image-20210527135624628"></p>
-<h4 id="5、docker镜像相关操作"><a href="#5、docker镜像相关操作" class="headerlink" title="5、docker镜像相关操作"></a>5、docker镜像相关操作</h4><h5 id="查看本地仓库中存在的镜像"><a href="#查看本地仓库中存在的镜像" class="headerlink" title="查看本地仓库中存在的镜像"></a>查看本地仓库中存在的镜像</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527141036.png" alt="image-20210527141036180"></p>
-<h5 id="显示镜像ID"><a href="#显示镜像ID" class="headerlink" title="显示镜像ID"></a>显示镜像ID</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images -q</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull 镜像:版本号</span><br></pre></td></tr></table></figure>
-
-<h5 id="通过命令行搜索镜像"><a href="#通过命令行搜索镜像" class="headerlink" title="通过命令行搜索镜像"></a>通过命令行搜索镜像</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search mysql</span><br></pre></td></tr></table></figure>
-
-<h5 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h5><p>镜像没有被使用</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker image rm 镜像名:tag</span><br><span class="line"></span><br><span class="line">docker image rm 镜像id</span><br></pre></td></tr></table></figure>
-
-<p>镜像被使用过</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker image rm -f 镜像名:tag</span><br><span class="line">docker image rm -f 镜像id</span><br></pre></td></tr></table></figure>
-
-<p>简化写法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker rmi -f 镜像ID</span><br><span class="line">docker rmi -f 镜像名:5.7</span><br><span class="line"></span><br><span class="line"># 删除所有</span><br><span class="line">docker rm -f $(docker images -q)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6、容器相关命令"><a href="#6、容器相关命令" class="headerlink" title="6、容器相关命令"></a>6、容器相关命令</h4><h5 id="通过镜像运行一个容器"><a href="#通过镜像运行一个容器" class="headerlink" title="通过镜像运行一个容器"></a>通过镜像运行一个容器</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run 镜像名:tag | 镜像ID</span><br><span class="line"></span><br><span class="line"># 后台执行</span><br><span class="line">docker run -d 镜像名:tag | 镜像ID</span><br><span class="line"></span><br><span class="line"># 映射宿主机</span><br><span class="line">docker run -p  宿主机端口号:容器内端口号  镜像名:tag</span><br><span class="line"></span><br><span class="line">比如：</span><br><span class="line">docker run tomcat:8.0-jre8</span><br></pre></td></tr></table></figure>
-
-<p>我们启动的一个容器，具有隔离性，是没有办法与外界交互的。</p>
-<p>启动tomcat:8080后，输入Linux系统IP地址和tomcat端口号</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527151007.png" alt="image-20210527151007147"></p>
-<p>我们需要在启动容器时添加参数。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080(系统上外部端口) : 8080(容器内服务监听的端口)  tomcat:8.0-jre8</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527153012.png" alt="image-20210527153012507"></p>
-<p><strong>注意：容器和容器之间是隔离的，因此我们启动多个容器，对于容器内可以都是用8080端口，但是容器映射的操作系统不能出现相同的端口号。</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 我们在启动一个tomcat</span><br><span class="line">docker run -p 8081:8080 tomcat:8.0-jre8</span><br></pre></td></tr></table></figure>
-
-<p>我们查看此时的容器：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527153517.png" alt="image-20210527153517558"></p>
-<h5 id="查看容器"><a href="#查看容器" class="headerlink" title="查看容器"></a>查看容器</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 查看正在运行程序</span><br><span class="line">docker ps </span><br><span class="line"># 查看所有程序</span><br><span class="line">docker ps -a</span><br><span class="line"># 返回正在运行的容器ID</span><br><span class="line">docker ps -q </span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527145515.png" alt="image-20210527145515519"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CONTAINER ID   容器ID</span><br><span class="line">IMAGE     	   镜像</span><br><span class="line">COMMAND        容器内执行命令      </span><br><span class="line">CREATED        创建时间</span><br><span class="line">STATUS         当前状态</span><br><span class="line">PORTS      	   容器服务监听的端口</span><br><span class="line">NAMES		   容器名称</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="重启、停止容器"><a href="#重启、停止容器" class="headerlink" title="重启、停止容器"></a>重启、停止容器</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 启动容器</span><br><span class="line">docker start 容器ID|容器名称</span><br><span class="line"># 重启容器</span><br><span class="line">docker restart 容器ID|容器名称</span><br><span class="line"># 正常停止容器</span><br><span class="line">docker stop 容器ID|容器名称</span><br><span class="line"># 立即停止容器</span><br><span class="line">docker kill 容器ID|容器名称</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 删除停止的容器</span><br><span class="line">docker rm 容器ID|容器名称 </span><br><span class="line"># 删除正在运行的容器</span><br><span class="line">docker rm -f 容器ID|容器名称</span><br><span class="line"># 删除所有容器</span><br><span class="line">docker rm -f $(docker ps -aq)</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="查看容器内服务运行日志"><a href="#查看容器内服务运行日志" class="headerlink" title="查看容器内服务运行日志"></a>查看容器内服务运行日志</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker logs 容器ID|容器名称</span><br><span class="line"></span><br><span class="line"># 实时监听日志信息</span><br><span class="line">docker logs -f 容器ID|容器名称</span><br><span class="line"></span><br><span class="line"># 加上日志的时间戳</span><br><span class="line">docker logs -t  容器ID|容器名称</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="查看容器内进程"><a href="#查看容器内进程" class="headerlink" title="查看容器内进程"></a>查看容器内进程</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker top 容器ID|容器名称</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="宿主机和容器内部进行交互"><a href="#宿主机和容器内部进行交互" class="headerlink" title="宿主机和容器内部进行交互"></a>宿主机和容器内部进行交互</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 进入容器，并于容器内命令终端进行交互</span><br><span class="line">docker exec -it 容器ID|容器名称 bash</span><br></pre></td></tr></table></figure>
-
-<p>bash就是容器内的终端。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527160713.png" alt="image-20210527160713325"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 退出容器</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527160916.png" alt="image-20210527160916709"></p>
-<h5 id="宿主机和容器的传输文件"><a href="#宿主机和容器的传输文件" class="headerlink" title="宿主机和容器的传输文件"></a>宿主机和容器的传输文件</h5><p>从容器复制文件到宿主机</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker cp 容器ID|容器名称:容器内资源路径 宿主机路径</span><br><span class="line"></span><br><span class="line">如：</span><br><span class="line">docker cp 86fe26389d83:/usr/local/tomcat/RUNNING.txt ./RUNNING.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527161639.png" alt="image-20210527161639012"></p>
-<p>从宿主机复制文件到容器</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker cp 文件|路径  容器ID|容器名称 : /容器内资源路径</span><br><span class="line"></span><br><span class="line">如：</span><br><span class="line">docker cp aa.txt 86fe26389d83:/usr/local/tomcat</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527162033.png" alt="image-20210527162033156"></p>
-<h5 id="查看容器内细节"><a href="#查看容器内细节" class="headerlink" title="查看容器内细节"></a>查看容器内细节</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect 容器ID|容器名称</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="数据卷Volume"><a href="#数据卷Volume" class="headerlink" title="数据卷Volume"></a>数据卷Volume</h5><blockquote>
-<p>实现宿主机系统与容器之间的文件共享</p>
-<p>类似于挂载：</p>
-<p>宿主机系统目录改变，直接影响docker目录</p>
-</blockquote>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527204555.png" alt="image-20210527204555352"></p>
-<p>如何使用：</p>
-<p>启动一个容器时 比如启动一个tomcat</p>
-<ol>
-<li><p>自定义数据卷目录</p>
-<p><code>docker run-d -p 8080:8080 -v 宿主机目录(绝对路径):容器内路径  tomcat:8.0-jre8</code></p>
-<p>例：<br><code>docker run -d -p 8080:8080 -v /root/apps/:/usr/local/tomcat/webapps tomcat:8.0-jre8</code></p>
-</li>
-<li><p>自动数据卷目录</p>
-<p><code>docker run -d -p 8080:8080 -v aa:/usr/local/tomcat/webapps tomcat:8.0-jre8</code></p>
-<p>注意：</p>
-<ol>
-<li>aa代表一个数据卷名字，可以随便写。docker在不存在时自动创建这个数据卷同时自动映射宿主机中某个目录</li>
-<li>同时在启动容器时，会将aa对应容器目录中全部内容复制到aa映射目录中</li>
-</ol>
-</li>
-</ol>
-<h5 id="将容器打包成新镜像"><a href="#将容器打包成新镜像" class="headerlink" title="将容器打包成新镜像"></a>将容器打包成新镜像</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit -m &quot;&quot;  -a&quot;&quot;  容器ID|容器名称   打包的镜像名称:标签</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="将镜像备份出来"><a href="#将镜像备份出来" class="headerlink" title="将镜像备份出来"></a>将镜像备份出来</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save 容器名称 -o 文件名</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="7、-docker镜像原理"><a href="#7、-docker镜像原理" class="headerlink" title="7、 docker镜像原理"></a>7、 docker镜像原理</h4><blockquote>
-<p>镜像是一种轻量级的，可执行的独立软件包，用来打包软件运行环境和基于运行环境开发的软件，它包含某个软件所需的所有内容，包括代码、运行时所需的库、环境变量和配置文件。</p>
-</blockquote>
-<p>一个软件镜像不仅仅是原来的软件包，包含软件包所需的操作系统依赖，软件自身的依赖，以及自身的软件包组成。不同的镜像之间可能会存在公共的镜像，因此，<strong>docker镜像采用分层镜像原理</strong>。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528125334.png" alt="image-20210528125326506"></p>
-<p>docker在设计镜像时，每一个镜像都是由多个镜像共同组成。</p>
-<h5 id="镜像原理-—-UnionFS（联合文件系统）"><a href="#镜像原理-—-UnionFS（联合文件系统）" class="headerlink" title="镜像原理  —-   UnionFS（联合文件系统）"></a>镜像原理  —-   UnionFS（联合文件系统）</h5><blockquote>
-<p> UnionFS文件系统是一种分层，轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加。同时可以将不同目录挂载到同一虚拟文件系统下。</p>
-</blockquote>
-<p>UnionFS文件系统是docker镜像的基础。</p>
-<p>这种文件系统特性：就是一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录。</p>
-<p><code>docker的镜像实际上是由一层一层的文件系统组成。</code></p>
-<h5 id="为什么要采用这种分层结构"><a href="#为什么要采用这种分层结构" class="headerlink" title="为什么要采用这种分层结构"></a>为什么要采用这种分层结构</h5><p><code>资源共享</code></p>
-<p>有多个镜像都是从相同的base镜像构建而来，那么宿主机只需在磁盘中保存一份base镜像。同时内存也只需要要加载一份base镜像，就可以为所有容器服务了。而且镜像的每一层都是可以被共享的。</p>
-<p>当容器启动时，一个新的可写层被加载到镜像的顶部。这一层通常被称为容器层，容器层之下都叫镜像层。</p>
-<h4 id="8、docker安装mysql服务"><a href="#8、docker安装mysql服务" class="headerlink" title="8、docker安装mysql服务"></a>8、docker安装mysql服务</h4><h5 id="1、dockerhub中搜索mysq服务"><a href="#1、dockerhub中搜索mysq服务" class="headerlink" title="1、dockerhub中搜索mysq服务"></a>1、dockerhub中搜索mysq服务</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.7</span><br></pre></td></tr></table></figure>
-
-<h5 id="2、基本使用"><a href="#2、基本使用" class="headerlink" title="2、基本使用"></a>2、基本使用</h5><p>在<code>dockerhub</code>中详细的解释的如何使用这个镜像。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528132841.png" alt="image-20210528132841767"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag</span><br></pre></td></tr></table></figure>
-
-<p>-e MYSQL_ROOT_PASSWORD=my-secret-pw     代表给root用户指定密码</p>
-<p>比如：启动一个mysql服务，操作系统端口号为3307，密码为root，并且在后台执行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3307:3306 -e MYSQL_ROOT_PASSWORD=root mysql:5.7</span><br></pre></td></tr></table></figure>
-
-<p>此时，就已经启动了mysql服务</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528133928.png" alt="image-20210528133928618"></p>
-<p>我们可以通过SQLyog来查看：</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528134124.png" alt="image-20210528134123883"></p>
-<p>​    <img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528134204.png" alt="image-20210528134204014"></p>
-<h5 id="3、持久化"><a href="#3、持久化" class="headerlink" title="3、持久化"></a>3、持久化</h5><p>容器与容器之间是隔离的。如果我们删除某个容器，那么容器中的数据就会被删除。因此我们要做数据持久化。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528135042.png" alt="image-20210528135042157"></p>
-<p>通过数据卷的方式持久化。</p>
-<p>启动一个容器，后台运行，操作系统的端口号为3307，用户密码为root，名称为mysql1</p>
-<p>mysqldata数据卷没有会重新创建。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p  3307:3306 -e MYSQL_ROOT_PASSWORD=root --name mysql1 -v mysqldata:/var/lib/mysql  mysql:5.7</span><br></pre></td></tr></table></figure>
-
-
-
-<p>执行之后，启动mysql服务</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528140034.png" alt="image-20210528140034121"></p>
-<p>我们查看是否有mysqldata数据卷</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume ls</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528140149.png" alt="image-20210528140149727"></p>
-<p>我们查看mysqldata数据卷中的信息</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume inspect mysqldata</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528140405.png" alt="image-20210528140405571"></p>
-<p>此时，数据卷创建好了，并且挂载到宿主机的某个位置。</p>
-<p>我们在客户端创建表，添加数据。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528140654.png" alt="image-20210528140654325"></p>
-<p>此时，我们停掉mysql服务，并且删除这个容器。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm -f $(docker ps -aq)</span><br></pre></td></tr></table></figure>
-
-<p>然后重新启动容器，并且指定数据卷为mysqldata。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p  3307:3306 -e MYSQL_ROOT_PASSWORD=root --name mysql1 -v mysqldata:/var/lib/mysql  mysql:5.7</span><br></pre></td></tr></table></figure>
-
-<p>重新打开客户端。数据依然还在。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528141026.png" alt="image-20210528141026518"></p>
-<h5 id="4、-修改配置文件"><a href="#4、-修改配置文件" class="headerlink" title="4、 修改配置文件"></a>4、 修改配置文件</h5><p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528141428.png"></p>
-<p>默认的配置文件是在<code>/etc/mysql/my.cnf</code>。</p>
-<p>启动一个mysql服务，后台运行，指定root用户密码，指定容器名，使用数据卷进行数据持久化，以修改之后的配置文件启动。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3308:3306 -e MYSQL_ROOT_PASSWORD=root --name mysql3308 -v mysqldata:/var/lib/mysql -v mysqlconfig:/etc/mysql mysql:5.7</span><br></pre></td></tr></table></figure>
-
-<p>我们通过数据卷的方式将MySQL的配置文件挂载到操作系统的某个目录文件中。</p>
-<p>查看配置文件的位置：</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528142409.png" alt="image-20210528142409329"></p>
-<p>我们在宿主机中找到这个目录文件。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528142453.png" alt="image-20210528142452935"></p>
-<p>所以我们在启动MySQL时，指定数据卷。就可以达到通过配置文件来启动的目的。</p>
-<h4 id="9、docker中容器之间的网络配置"><a href="#9、docker中容器之间的网络配置" class="headerlink" title="9、docker中容器之间的网络配置"></a>9、docker中容器之间的网络配置</h4><h5 id="1、-为什么要提供网络功能"><a href="#1、-为什么要提供网络功能" class="headerlink" title="1、 为什么要提供网络功能"></a>1、 为什么要提供网络功能</h5><p><code>docker允许通过外部访问容器或容器互联的方式来提供网络服务。</code></p>
-<h5 id="2、网络配置原理"><a href="#2、网络配置原理" class="headerlink" title="2、网络配置原理"></a>2、网络配置原理</h5><p>当docker启动时，会自动在主机上创建一个<code>docker0</code>虚拟网桥。实际上是Linux的一个bridge，可以理解为一个软件交换机。它会在挂载到它的网口之间进行转发。</p>
-<p>同时，docker随机分配一个本地未占用的私有网段中的一个地址给<code>docker0</code>接口。</p>
-<p>当创建一个 Docker 容器的时候，同时会创建了一对 <code>veth pair</code> 接口（当数据包发送到一个接口时，另外一个接口也可以收到相同的数据包）。这对接口一端在容器内，即 <code>eth0</code>；另一端在本地并被挂载到 <code>docker0</code> 网桥，名称以 <code>veth</code> 开头（例如 <code>vethAQI2QT</code>）。</p>
-<p>通过这种方式，主机可以跟容器通信，容器之间也可以相互通信。Docker 就创建了在主机和所有容器之间一个虚拟共享网络。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528193314.png" alt="image-20210528193306826"></p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528194234.png" alt="image-20210528194234276"></p>
-<h5 id="3、网络使用"><a href="#3、网络使用" class="headerlink" title="3、网络使用"></a>3、网络使用</h5><p><strong>查看docker中的网络配置</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network ls</span><br></pre></td></tr></table></figure>
-
-<p><code>bridge</code>是默认的网桥</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528194827.png" alt="image-20210528194820229"></p>
-<p>我们可以进入一个容器来查看网络配置信息。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 启动容器</span><br><span class="line">docker run -d -p 8080:8080 --name mytomcat tomcat:8.0-jre8</span><br><span class="line"></span><br><span class="line">docker inspect 容器ID|容器名</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528195619.png" alt="image-20210528195619131"></p>
-<p><strong>容器与容器之间的交互</strong></p>
-<p>我们创建两个tomcat，mytomcat和tomcat2。我们进入mytomcat的容器内，在这个容器内去访问tomcat2的8080端口。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528200352.png" alt="image-20210528200352177"></p>
-<p>我们还需要知道tomcat2的ip地址。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect 55fd2f590189</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528200907.png" alt="image-20210528200907644"></p>
-<p>进入mytomcat容器内</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it 66fd52d82688 bash</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">访问tomcat2的8080端口</span><br><span class="line">curl http://172.17.0.3:8080</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528201243.png" alt="image-20210528201243617"></p>
-<h5 id="自定义网桥"><a href="#自定义网桥" class="headerlink" title="自定义网桥"></a>自定义网桥</h5><p>如果我们每一个容器都是用默认的网桥。就会造成带宽的降低。因此我们自定义网桥。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 创建自定义网桥</span><br><span class="line">docker network create -d bridge 网桥名称 </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create -d bridge net</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528202247.png" alt="image-20210528202247215"></p>
-<p>我们查看net网桥中的信息。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528202552.png" alt="image-20210528202552064"></p>
-<p>我们在启动一个tomcat，这是的tomcat IP地址就会是172.18.0.xxx这个网段了。</p>
-<h5 id="使用自定义网桥"><a href="#使用自定义网桥" class="headerlink" title="使用自定义网桥"></a>使用自定义网桥</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 8080:8080 --name tomcat --network net tomcat:8.0-jre8</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210528203139.png" alt="image-20210528203139533"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210415095537.png" alt="image-20210415095401843"></p>
 
       
 
@@ -613,7 +240,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/29/Docker/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/01/%E7%94%9F%E4%BA%A7%E8%80%85%E4%B8%8E%E6%B6%88%E8%B4%B9%E8%80%85/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -627,7 +254,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/01/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/06/01/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -636,6 +263,11 @@
       </div>
     </a>
   
+  
+    <a href="/2021/06/01/java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
