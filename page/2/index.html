@@ -137,6 +137,21 @@
     <article id="post-Docker" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/01/Docker/">Docker</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/01/Docker/" class="archive-article-date">
+  	<time datetime="2021-06-01T07:38:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>docker中文网：<a target="_blank" rel="noopener" href="https://vuepress.mirror.docker-practice.com/">https://vuepress.mirror.docker-practice.com/</a></p>
@@ -161,7 +176,7 @@
 </li>
 </ol>
         
-          <a class="article-more-a" href="/2021/05/29/Docker/#more">more >></a>
+          <a class="article-more-a" href="/2021/06/01/Docker/#more">more >></a>
         
       
 
@@ -174,7 +189,88 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/05/29/Docker/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/01/Docker/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-运行时数据区" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/01/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/">运行时数据区</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/01/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/" class="archive-article-date">
+  	<time datetime="2021-06-01T07:38:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-什么是运行时数据区"><a href="#1-什么是运行时数据区" class="headerlink" title="1.什么是运行时数据区"></a>1.什么是运行时数据区</h3><blockquote>
+<p>Java虚拟机在执行Java程序的过程中，会涉及的数据划分到不同的内存区域去管理，而这部分区域就是运行时数据区。</p>
+</blockquote>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210427110217.png" alt="image-20210427110217775"></p>
+<p>运行时数据区有5个区域。分别是：方法区，虚拟机栈，本地方法栈，堆，程序计数器。</p>
+<p>其中：这5个区域可以分成两类：线程私有，线程共享</p>
+<ul>
+<li>线程私有：虚拟机栈，本地方法栈，程序计数器</li>
+<li>线程共享：方法区，堆</li>
+</ul>
+<p>线程共享和线程私有的区别是：<strong>线程私有是跟随线程的启动而存在，线程共享是跟随虚拟机的启动而存在</strong></p>
+<blockquote>
+<p>线程是一个程序里的运行单元。JVM允许一个应用有多个线程并行的执行</p>
+<p>在Hotspot  JVM里，每个线程都与操作系统的本地线程直接映射。</p>
+<p>当一个Java线程准备好执行以后，此时一个操作系统的本地线程也同时创建。Java线程执行终止后，本地线程也会回收</p>
+<p>操作系统负责所有线程的安排调度到任何一个可用的CPU上，一旦本地线程初始化成功，它就会调用Java线程中的run()方法</p>
+</blockquote>
+        
+          <a class="article-more-a" href="/2021/06/01/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/01/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/">展开全文 >></a>
         </p>
       
 

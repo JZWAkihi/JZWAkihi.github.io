@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Joy-J博客</title>
+  <title>Java内存模型 | Joy-J博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Java内存模型​        在并发程序中，涉及到操作系统的底层，因此我们很难去判断程序的执行是怎样的。同时涉及到多个线程对共享资源的访问。一致性和安全性将会受到严重挑战。所以，我们需要保证多个线程正确的协同工作。Java内存模型可以帮助我们解决这些问题。 123# Java内存区域(结构)和Java内存模型1. java内存区域和Java内存模型是两个不一样的东西。内存区域是指JVM运行时将">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Joy-J博客">
+<meta property="og:title" content="Java内存模型">
 <meta property="og:url" content="http://example.com/2021/06/01/java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Joy-J博客">
 <meta property="og:description" content="Java内存模型​        在并发程序中，涉及到操作系统的底层，因此我们很难去判断程序的执行是怎样的。同时涉及到多个线程对共享资源的访问。一致性和安全性将会受到严重挑战。所以，我们需要保证多个线程正确的协同工作。Java内存模型可以帮助我们解决这些问题。 123# Java内存区域(结构)和Java内存模型1. java内存区域和Java内存模型是两个不一样的东西。内存区域是指JVM运行时将">
@@ -19,8 +19,8 @@
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210508085016.png">
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210419150856.png">
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210411120918.png">
-<meta property="article:published_time" content="2021-06-01T07:33:22.557Z">
-<meta property="article:modified_time" content="2021-06-01T07:34:46.041Z">
+<meta property="article:published_time" content="2021-06-01T07:38:36.000Z">
+<meta property="article:modified_time" content="2021-06-01T07:39:57.721Z">
 <meta property="article:author" content="蒋志伟">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210508082612.png">
@@ -143,6 +143,21 @@
           <div id="js-content" class="content-ll">
             <article id="post-java内存模型" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java内存模型
+    </h1>
+  
+
+        
+        <a href="/2021/06/01/java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2021-06-01T07:38:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-01</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -344,18 +359,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/01/%E7%94%9F%E4%BA%A7%E8%80%85%E4%B8%8E%E6%B6%88%E8%B4%B9%E8%80%85/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/06/01/%E7%BA%BF%E7%A8%8B%E7%9A%84%E9%80%9A%E4%BF%A1/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/2021/06/01/CAS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CAS问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
