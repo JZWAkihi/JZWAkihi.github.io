@@ -1,0 +1,474 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/">
+  <link rel="icon" href="/img/%E7%AC%94%E8%AE%B0.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="蒋志伟">
+  <meta name="keywords" content="">
+  
+  <title>CAS问题 - Joy-J博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/image/code-wallpaper-22.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="CAS问题">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-06-15 15:38" pubdate>
+        June 15, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      20
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">CAS问题</h1>
+            
+            <div class="markdown-body">
+              <h2 id="ReentrantLock"><a href="#ReentrantLock" class="headerlink" title="ReentrantLock"></a>ReentrantLock</h2><p>相对于synchronized，它具备的特点是：</p>
+<ol>
+<li>可中断</li>
+<li>可以设置超时时间</li>
+<li>可以设置为公平锁</li>
+<li>支持多个条件变量</li>
+</ol>
+<p>与synchronized一样，都支持可重入。</p>
+<p>基本语法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//获取锁</span><br>reentrantLock.lock();<br><span class="hljs-keyword">try</span>&#123;<br>	<span class="hljs-comment">//临界区</span><br>&#125;<span class="hljs-keyword">finally</span>&#123;<br>	<span class="hljs-comment">//释放锁</span><br>	reentrantLock.unlock();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="1、ReentrantLock的特点"><a href="#1、ReentrantLock的特点" class="headerlink" title="1、ReentrantLock的特点"></a>1、ReentrantLock的特点</h3><h4 id="1、可重入"><a href="#1、可重入" class="headerlink" title="1、可重入"></a>1、可重入</h4><p>可重入是指：同一个线程如果首次获得了这把锁，那么因为它是这把锁的拥有者，因此由权力再次获取这把锁。</p>
+<p>下面这个例子：主线程调用方法method1()，在method1中获取lock锁。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock();<br><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method1</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">try</span>&#123;<br>        lock.lock();<br>        System.out.println(<span class="hljs-string">&quot;方法1 执行&quot;</span>);<br>        method2();<br>    &#125;<span class="hljs-keyword">finally</span> &#123;<br>        lock.unlock();<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method2</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">try</span>&#123;<br>        lock.lock();<br>        System.out.println(<span class="hljs-string">&quot;方法2 执行&quot;</span>);<br>        method3();<br>    &#125;<span class="hljs-keyword">finally</span> &#123;<br>        lock.unlock();<br>    &#125;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">method3</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">try</span> &#123;<br>        lock.lock();<br>        System.out.println(<span class="hljs-string">&quot;方法3 执行&quot;</span>);<br>    &#125;<span class="hljs-keyword">finally</span> &#123;<br>        lock.unlock();<br>    &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>    method1();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210602222128.png" srcset="/img/loading.gif" lazyload alt="image-20210602222121768"></p>
+<h4 id="2、可打断"><a href="#2、可打断" class="headerlink" title="2、可打断"></a>2、可打断</h4><p><code>lock.lockInterruptibly()</code>方法。</p>
+<p>如果没有竞争那么此方法就会获取lock对象锁。</p>
+<p>如果有竞争就进入阻塞队列，<code>可以被其他线程用 interruput 方法打断。</code></p>
+<p>下面这个例子：主线程先获取锁，t1线程进入阻塞队列。主线程执行中断。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> InterruptedException </span>&#123;<br>    ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock();<br><br>    Thread t1 = <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;<br>        System.out.println(<span class="hljs-string">&quot;t1线程启动&quot;</span>);<br><br>        <span class="hljs-keyword">try</span>&#123;<br>            lock.lockInterruptibly();<br>        &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>            e.printStackTrace();<br>            System.out.println(<span class="hljs-string">&quot;等待的过程中被打断&quot;</span>);<br>            <span class="hljs-keyword">return</span>;<br>        &#125;<br><br>        <span class="hljs-keyword">try</span> &#123;<br>            System.out.println(<span class="hljs-string">&quot;获得了锁&quot;</span>);<br>        &#125;<span class="hljs-keyword">finally</span> &#123;<br>            lock.unlock();<br>        &#125;<br><br><br>    &#125;,<span class="hljs-string">&quot;t1&quot;</span>);<br><br>    lock.lock();<br>    System.out.println(<span class="hljs-string">&quot;主线程获得了锁&quot;</span>);<br>    t1.start();<br><br>    <span class="hljs-keyword">try</span> &#123;<br>        sleep(<span class="hljs-number">10</span>);<br>        t1.interrupt();<br>        System.out.println(<span class="hljs-string">&quot;执行中断&quot;</span>);<br>    &#125;<span class="hljs-keyword">finally</span> &#123;<br>        lock.unlock();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210602223017.png" srcset="/img/loading.gif" lazyload alt="image-20210602223017282"></p>
+<h4 id="3、-锁超时"><a href="#3、-锁超时" class="headerlink" title="3、 锁超时"></a>3、 锁超时</h4><p>当线程在尝试获取锁时，可能锁已经被其他线程占了。</p>
+<p>这是我们可以设置一段时间，在这段时间内，线程可以获得锁。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> InterruptedException </span>&#123;<br>    ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock();<br><br>    Thread t1 = <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;<br>        System.out.println(<span class="hljs-string">&quot;t1线程启动&quot;</span>);<br><br>        <span class="hljs-keyword">try</span> &#123;<br>            <span class="hljs-keyword">if</span>(!lock.tryLock(<span class="hljs-number">1</span>, TimeUnit.SECONDS))&#123;<br>                System.out.println(<span class="hljs-string">&quot;获取锁等待1s后失败,返回&quot;</span>);<br>                <span class="hljs-keyword">return</span>;<br>            &#125;<br>        &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>            e.printStackTrace();<br>        &#125;<br><br>        <span class="hljs-keyword">try</span>&#123;<br>            System.out.println(<span class="hljs-string">&quot;t1线程获取锁&quot;</span>);<br>        &#125;<span class="hljs-keyword">finally</span> &#123;<br>            lock.unlock();<br>        &#125;<br>    &#125;,<span class="hljs-string">&quot;t1&quot;</span>);<br><br>    lock.lock();<br>    System.out.println(<span class="hljs-string">&quot;主线程获取了锁&quot;</span>);<br>    t1.start();<br><br>    <span class="hljs-keyword">try</span>&#123;<br>        sleep(<span class="hljs-number">3000</span>);<br>    &#125;<span class="hljs-keyword">finally</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;主线程释放锁&quot;</span>);<br>        lock.unlock();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210602225851.png" srcset="/img/loading.gif" lazyload alt="image-20210602225851021"></p>
+<h4 id="4、公平锁"><a href="#4、公平锁" class="headerlink" title="4、公平锁"></a>4、公平锁</h4><p>ReentrantLock 默认是<strong>不公平</strong>的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ReentrantLock</span><span class="hljs-params">()</span> </span>&#123;<br>    sync = <span class="hljs-keyword">new</span> NonfairSync();<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ReentrantLock</span><span class="hljs-params">(<span class="hljs-keyword">boolean</span> fair)</span> </span>&#123;<br>    sync = fair ? <span class="hljs-keyword">new</span> FairSync() : <span class="hljs-keyword">new</span> NonfairSync();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>不公平锁</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> InterruptedException </span>&#123;<br>    <span class="hljs-comment">//设置为非公平锁</span><br>    ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock(<span class="hljs-keyword">false</span>);<br><br>    lock.lock();<br><br>    <span class="hljs-comment">//创建500个线程</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">500</span>; i++) &#123;<br>        <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;<br>            lock.lock();<br>            <span class="hljs-keyword">try</span>&#123;<br>                System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;Running&quot;</span>);<br>            &#125;<span class="hljs-keyword">finally</span> &#123;<br>                lock.unlock();<br>            &#125;<br>        &#125;,<span class="hljs-string">&quot;t&quot;</span> + i).start();<br>    &#125;<br><br>    <span class="hljs-comment">//1s之后争抢锁</span><br>    Thread.sleep(<span class="hljs-number">1000</span>);<br>    <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;<br>        System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot; start&quot;</span>);<br>        lock.lock();<br>        <span class="hljs-keyword">try</span>&#123;<br>            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot; Running&quot;</span>);<br>        &#125;<span class="hljs-keyword">finally</span> &#123;<br>            lock.unlock();<br>        &#125;<br>    &#125;,<span class="hljs-string">&quot;强行插入&quot;</span>).start();<br><br>    lock.unlock();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><img src="C:\Users\JiangZW\AppData\Roaming\Typora\typora-user-images\image-20210602231050571.png" srcset="/img/loading.gif" lazyload alt="非公平锁"></p>
+<p>公平锁</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> InterruptedException </span>&#123;<br><br>    <span class="hljs-comment">//公平锁</span><br>    ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock(<span class="hljs-keyword">true</span>);<br><br>    lock.lock();<br><br>    <span class="hljs-comment">//创建500个线程</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">500</span>; i++) &#123;<br>        <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;<br>            lock.lock();<br>            <span class="hljs-keyword">try</span>&#123;<br>                System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;Running&quot;</span>);<br>            &#125;<span class="hljs-keyword">finally</span> &#123;<br>                lock.unlock();<br>            &#125;<br>        &#125;,<span class="hljs-string">&quot;t&quot;</span> + i).start();<br>    &#125;<br><br>    <span class="hljs-comment">//1s之后争抢锁</span><br>    Thread.sleep(<span class="hljs-number">1000</span>);<br>    <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;<br>        System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot; start&quot;</span>);<br>        lock.lock();<br>        <span class="hljs-keyword">try</span>&#123;<br>            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot; Running&quot;</span>);<br>        &#125;<span class="hljs-keyword">finally</span> &#123;<br>            lock.unlock();<br>        &#125;<br>    &#125;,<span class="hljs-string">&quot;强行插入&quot;</span>).start();<br><br>    lock.unlock();<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\JiangZW\AppData\Roaming\Typora\typora-user-images\image-20210602231359627.png" srcset="/img/loading.gif" lazyload alt="公平锁"></p>
+<h4 id="条件变量"><a href="#条件变量" class="headerlink" title="条件变量"></a>条件变量</h4><p>在synchronized中也有条件变量。</p>
+<p>某一个线程获取锁之后，调用wait()方法。就会进入waitiing队列中。(这就是为什么调用wait()方法必须先所得锁)</p>
+<p><code>但是synchronized中只有一个wait队列。而ReentrantLock支持多个wait队列。</code></p>
+<p>如何使用：</p>
+<ul>
+<li>await前需要获得锁</li>
+<li>await执行后，会释放锁，进入conditionObject等待</li>
+<li>await的线程被唤醒（或打断、或超时）去重新竞争lock锁</li>
+<li>竞争lock锁成功后，从await后继续执行</li>
+</ul>
+<p>例子：有两个员工需要等到烟和早餐才能工作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">test1</span> </span>&#123;<br><br>    <span class="hljs-keyword">static</span> ReentrantLock lock = <span class="hljs-keyword">new</span> ReentrantLock();<br>    <span class="hljs-comment">//两个条件变量</span><br>    <span class="hljs-keyword">static</span> Condition waitCigaretteQueue = lock.newCondition();<br>    <span class="hljs-keyword">static</span> Condition waitbreakfastQueue = lock.newCondition();<br>    <span class="hljs-comment">//初始化  没有烟  也没有早餐</span><br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">boolean</span> hasCigrette = <span class="hljs-keyword">false</span>;<br>    <span class="hljs-keyword">static</span> <span class="hljs-keyword">volatile</span> <span class="hljs-keyword">boolean</span> hasBreakfast = <span class="hljs-keyword">false</span>;<br><br><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> InterruptedException </span>&#123;<br>        <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                lock.lock();<br>				<span class="hljs-comment">//没有烟时</span><br>                <span class="hljs-keyword">while</span>(!hasCigrette)&#123;<br>                    <span class="hljs-keyword">try</span>&#123;<br>                        waitCigaretteQueue.await();<br>                        System.out.println(<span class="hljs-string">&quot;t1线程正在等烟&quot;</span>);<br>                    &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>                        e.printStackTrace();<br>                    &#125;<br>                &#125;<br>                <span class="hljs-comment">//有烟了</span><br>                System.out.println(<span class="hljs-string">&quot;t1线程等到了他的烟&quot;</span>);<br>            &#125;<span class="hljs-keyword">finally</span> &#123;<br>                lock.unlock();<br>            &#125;<br>        &#125;,<span class="hljs-string">&quot;t1&quot;</span>).start();<br><br>        <span class="hljs-keyword">new</span> Thread(() -&gt; &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                lock.lock();<br>                <span class="hljs-comment">//没有早餐</span><br>                <span class="hljs-keyword">while</span> (!hasBreakfast) &#123;<br>                    <span class="hljs-keyword">try</span> &#123;<br>                        System.out.println(<span class="hljs-string">&quot;t2线程正在等早餐&quot;</span>);<br>                        waitbreakfastQueue.await();<br><br>                    &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>                        e.printStackTrace();<br>                    &#125;<br>                &#125;<br>                <span class="hljs-comment">//有早餐了</span><br>                System.out.println(<span class="hljs-string">&quot;t2等到了他的早餐&quot;</span>);<br>            &#125; <span class="hljs-keyword">finally</span> &#123;<br>                lock.unlock();<br>            &#125;<br>        &#125;,<span class="hljs-string">&quot;t2&quot;</span>).start();<br><br>        sleep(<span class="hljs-number">1</span>);<br>        sendBreakfast();<br>        sleep(<span class="hljs-number">1</span>);<br>        sendCigarette();<br><br>    &#125;<br><br><br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendCigarette</span><span class="hljs-params">()</span> </span>&#123;<br>        lock.lock();<br>        <span class="hljs-keyword">try</span> &#123;<br>            System.out.println(<span class="hljs-string">&quot;t1线程烟到了&quot;</span>);<br>            hasCigrette = <span class="hljs-keyword">true</span>;<br>            waitCigaretteQueue.signal();<br>        &#125; <span class="hljs-keyword">finally</span> &#123;<br>            lock.unlock();<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendBreakfast</span><span class="hljs-params">()</span> </span>&#123;<br>        lock.lock();<br>        <span class="hljs-keyword">try</span> &#123;<br>            System.out.println(<span class="hljs-string">&quot;t2线程早餐到了&quot;</span>);<br>            hasBreakfast = <span class="hljs-keyword">true</span>;<br>            waitbreakfastQueue.signal();<br>        &#125; <span class="hljs-keyword">finally</span> &#123;<br>            lock.unlock();<br>        &#125;<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/05/01/Docker/">
+                        <span class="hidden-mobile">Docker</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

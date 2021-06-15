@@ -170,6 +170,56 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/02/01/SpringBoot+Vue+SpringSecurity+JWT+Axios%E9%85%8D%E7%BD%AE%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2/" target="_self">
+          SpringBoot、SpringSecurity、Vue、JWT实现前后端分离的登录功能
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/02/01/SpringBoot+Vue+SpringSecurity+JWT+Axios%E9%85%8D%E7%BD%AE%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2/" target="_self">
+          
+          
+            
+          
+          前后端代码：GitHub地址
+Vue-Cli创建前端项目
+前端项目目录结构我们需要Login.vue和Home.vue组件，一个用于登录，一个用于登录成功之后的跳转。
+我们需要封装一些函数，这些函数用于在前后端交互时请求与响应的拦截。定义api.js
+我们还需要删除原有的组件，清除App.vue的内容（不能删除）。
+
+引入Element-ui参考element-ui官网
+在main.js文件中引入
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-01 15:38" pubdate>
+              2021-02-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%A1%86%E6%9E%B6/">框架</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/02/01/redis%E5%AE%9E%E7%8E%B0mybatis%E7%9A%84%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98/" target="_self">
           Redis实现Mybatis二级缓存
         </a>
@@ -397,9 +447,9 @@ volatile可以解决可见性问题
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Java/">Java</a>
-            
               <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+            
+              <a href="/tags/Java/">Java</a>
             
           </div>
         
@@ -445,9 +495,9 @@ volatile可以解决可见性问题
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Java/">Java</a>
-            
               <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+            
+              <a href="/tags/Java/">Java</a>
             
           </div>
         
@@ -493,9 +543,9 @@ volatile可以解决可见性问题
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Java/">Java</a>
-            
               <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+            
+              <a href="/tags/Java/">Java</a>
             
           </div>
         
@@ -540,9 +590,9 @@ volatile可以解决可见性问题
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Java/">Java</a>
-            
               <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+            
+              <a href="/tags/Java/">Java</a>
             
           </div>
         
@@ -589,53 +639,6 @@ volatile可以解决可见性问题
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/10/05/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/" target="_self">
-          线程安全问题
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/10/05/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98/" target="_self">
-          
-          
-            
-          
-          线程安全问题1. 什么是线程安全要编写线程安全的代码，其核心在于要对状态访问操作进行管理，特别是对共享(Shared)的、可变(Mutable)的状态的访问。
-共享：变量可以由多个线程同时访问。可变：变量的值在其生命周期内可以发生变化。
-一个对象是否是线程安全的，取决于他是否被多个线程同时访问。这指的是程序中访问对象的方式，而不是对想要实现的功能。要使得对象是线程安全的，需要采用同步机制来协同对对
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-10-05 15:38" pubdate>
-              2020-10-05
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Java/">Java</a>
-            
-              <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
             
           </div>
         
