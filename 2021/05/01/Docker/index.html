@@ -242,7 +242,7 @@ We have a complete container solution for you no matter who you are and where yo
 </ol>
 <span id="more"></span>
 
-<h5 id="docker与虚拟机的区别"><a href="#docker与虚拟机的区别" class="headerlink" title="docker与虚拟机的区别"></a>docker与虚拟机的区别</h5><p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527201910.png" srcset="/img/loading.gif" lazyload alt="image-20210527201902749"></p>
+<h5 id="docker与虚拟机的区别"><a href="#docker与虚拟机的区别" class="headerlink" title="docker与虚拟机的区别"></a>docker与虚拟机的区别</h5><p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527201910.png" srcset="/img/loading.gif" lazyload alt="docker和虚拟机区别"></p>
 <blockquote>
 <p>虚拟机的缺点：</p>
 <ol>
@@ -331,7 +331,7 @@ We have a complete container solution for you no matter who you are and where yo
 <h5 id="3-仓库-repository"><a href="#3-仓库-repository" class="headerlink" title="3. 仓库 repository"></a>3. 仓库 repository</h5><p>定义：<strong>用于存储docker中所有镜像的具体位置</strong>。</p>
 <p>远程仓库：docker在世界范围维护一个唯一的远程仓库</p>
 <p>本地仓库：当前自己机器中下载镜像存储位置</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527133415.png" srcset="/img/loading.gif" lazyload alt="image-20210527133408757"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527133415.png" srcset="/img/loading.gif" lazyload alt="Docker使用"></p>
 <p>例子：启动一个安装mysql 5.7 版本的容器</p>
 <ol>
 <li><p>打开docker hub   <a target="_blank" rel="noopener" href="https://registry.hub.docker.com/">https://registry.hub.docker.com/</a></p>
@@ -339,20 +339,20 @@ We have a complete container solution for you no matter who you are and where yo
 <li><p>选择mysql官方镜像，并选择版本5.7</p>
 </li>
 </ol>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527133809.png" srcset="/img/loading.gif" lazyload alt="image-20210527133809903"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527133809.png" srcset="/img/loading.gif" lazyload alt="Docker Hub使用"></p>
 <ol start="3">
 <li><p>启动docker</p>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">systemctl <span class="hljs-literal">start</span> docker<br></code></pre></td></tr></table></figure></li>
 <li><p>拉取docker</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> pull mysql:<span class="hljs-number">5</span>.<span class="hljs-number">7</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527134104.png" srcset="/img/loading.gif" lazyload alt="image-20210527134104009"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527134104.png" srcset="/img/loading.gif" lazyload alt="拉取镜像 - 1"></p>
 </li>
 </ol>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527135624.png" srcset="/img/loading.gif" lazyload alt="image-20210527135624628"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527135624.png" srcset="/img/loading.gif" lazyload alt="拉取镜像 - 2"></p>
 <h4 id="5、docker镜像相关操作"><a href="#5、docker镜像相关操作" class="headerlink" title="5、docker镜像相关操作"></a>5、docker镜像相关操作</h4><h5 id="查看本地仓库中存在的镜像"><a href="#查看本地仓库中存在的镜像" class="headerlink" title="查看本地仓库中存在的镜像"></a>查看本地仓库中存在的镜像</h5><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker images</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527141036.png" srcset="/img/loading.gif" lazyload alt="image-20210527141036180"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527141036.png" srcset="/img/loading.gif" lazyload alt="镜像字段"></p>
 <h5 id="显示镜像ID"><a href="#显示镜像ID" class="headerlink" title="显示镜像ID"></a>显示镜像ID</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">docker images -<span class="hljs-selector-tag">q</span><br></code></pre></td></tr></table></figure>
 
 
@@ -376,21 +376,21 @@ We have a complete container solution for you no matter who you are and where yo
 
 <p>我们启动的一个容器，具有隔离性，是没有办法与外界交互的。</p>
 <p>启动tomcat:8080后，输入Linux系统IP地址和tomcat端口号</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527151007.png" srcset="/img/loading.gif" lazyload alt="image-20210527151007147"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527151007.png" srcset="/img/loading.gif" lazyload alt="访问失败"></p>
 <p>我们需要在启动容器时添加参数。</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> run -p <span class="hljs-number">8080</span>(系统上外部端口) : <span class="hljs-number">8080</span>(容器内服务监听的端口)  tomcat:<span class="hljs-number">8</span>.<span class="hljs-number">0</span>-jre<span class="hljs-number">8</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527153012.png" srcset="/img/loading.gif" lazyload alt="image-20210527153012507"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527153012.png" srcset="/img/loading.gif" lazyload alt="成功访问"></p>
 <p><strong>注意：容器和容器之间是隔离的，因此我们启动多个容器，对于容器内可以都是用8080端口，但是容器映射的操作系统不能出现相同的端口号。</strong></p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 我们在启动一个tomcat</span><br><span class="hljs-attribute">docker</span> run -p <span class="hljs-number">8081</span>:<span class="hljs-number">8080</span> tomcat:<span class="hljs-number">8</span>.<span class="hljs-number">0</span>-jre<span class="hljs-number">8</span><br></code></pre></td></tr></table></figure>
 
 <p>我们查看此时的容器：</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">docker ps</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527153517.png" srcset="/img/loading.gif" lazyload alt="image-20210527153517558"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527153517.png" srcset="/img/loading.gif" lazyload alt="查看容器"></p>
 <h5 id="查看容器"><a href="#查看容器" class="headerlink" title="查看容器"></a>查看容器</h5><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-comment"># 查看正在运行程序</span><br>docker <span class="hljs-built_in">ps</span> <br><span class="hljs-comment"># 查看所有程序</span><br>docker <span class="hljs-built_in">ps</span> <span class="hljs-literal">-a</span><br><span class="hljs-comment"># 返回正在运行的容器ID</span><br>docker <span class="hljs-built_in">ps</span> <span class="hljs-literal">-q</span> <br></code></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527145515.png" srcset="/img/loading.gif" lazyload alt="image-20210527145515519"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527145515.png" srcset="/img/loading.gif" lazyload alt="查看容器命令"></p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cmake">CONTAINER ID   容器ID<br>IMAGE     	   镜像<br><span class="hljs-keyword">COMMAND</span>        容器内执行命令      <br>CREATED        创建时间<br>STATUS         当前状态<br>PORTS      	   容器服务监听的端口<br>NAMES		   容器名称<br></code></pre></td></tr></table></figure>
 
 
@@ -414,10 +414,10 @@ We have a complete container solution for you no matter who you are and where yo
 <h5 id="宿主机和容器内部进行交互"><a href="#宿主机和容器内部进行交互" class="headerlink" title="宿主机和容器内部进行交互"></a>宿主机和容器内部进行交互</h5><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-meta"># 进入容器，并于容器内命令终端进行交互</span><br>docker exec -it 容器ID<span class="hljs-string">|容器名称 bash</span><br></code></pre></td></tr></table></figure>
 
 <p>bash就是容器内的终端。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527160713.png" srcset="/img/loading.gif" lazyload alt="image-20210527160713325"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527160713.png" srcset="/img/loading.gif" lazyload alt="容器内部"></p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-comment"># 退出容器</span><br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527160916.png" srcset="/img/loading.gif" lazyload alt="image-20210527160916709"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210527160916.png" srcset="/img/loading.gif" lazyload alt="退出容器"></p>
 <h5 id="宿主机和容器的传输文件"><a href="#宿主机和容器的传输文件" class="headerlink" title="宿主机和容器的传输文件"></a>宿主机和容器的传输文件</h5><p>从容器复制文件到宿主机</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">docker cp 容器ID|容器名称:容器内资源路径 宿主机路径<br><br>如：<br>docker cp <span class="hljs-number">86</span>fe26389d83:<span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/tomcat/</span>RUNNING.txt ./RUNNING.txt<br></code></pre></td></tr></table></figure>
 
