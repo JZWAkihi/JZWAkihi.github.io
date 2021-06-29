@@ -18,7 +18,7 @@
   <meta name="author" content="蒋志伟">
   <meta name="keywords" content="">
   
-  <title>一个简单的Java程序 - Joy-J博客</title>
+  <title>Linux内核体系结构 - Joy-J博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -151,7 +151,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="一个简单的Java程序">
+            <span class="h2" id="subtitle" title="Linux内核体系结构">
               
             </span>
 
@@ -161,8 +161,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-01-03 15:38" pubdate>
-        January 3, 2020 pm
+      <time datetime="2021-06-29 23:24" pubdate>
+        June 29, 2021 pm
       </time>
     </span>
   
@@ -173,7 +173,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      733 字
+      915 字
     </span>
   
 
@@ -183,7 +183,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      9
        分钟
     </span>
   
@@ -213,26 +213,46 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">一个简单的Java程序</h1>
+            <h1 style="display: none">Linux内核体系结构</h1>
             
             <div class="markdown-body">
-              <p>这是一个简单的Java程序，所有的Java程序都有这样的结构，我们逐一对其分析。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FirstDame</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        <span class="hljs-comment">//控制台打印</span><br>        System.out.println(<span class="hljs-string">&quot;Hello World&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p><strong>public</strong> 是Java语言的==访问修饰符==，用于控制程序的其他部分对当前所修饰代码的访问级别。</p>
-<p><strong>class</strong>   可以暂时将它想象成一个盒子，里面包含的变量以及方法，Java程序的全部内容都必须放置在类中，以后有足够多的时间去从新理解它。</p>
-<p>关键字class后面紧跟类名。类名有标准的命名规范：名字以字母开头，后面是字母和数字的任意组合，长度不限，但一定不能使用关键字。<br>公共类名和源代码的文件名必须相同。比如上面一段代码的文件名为FirstDame.java 。(.java)是文件扩展名。</p>
-<p><strong>main</strong> Java虚拟机是从制定类中的main方法开始执行的。因此每一个Java源文件中都必须包含一个main方法，并且只有一个。我们定义的各种方法、类都可以在main中调用，但是要考虑访问修饰符。<br><strong>main</strong> 方法必须声明为public 这是Java语言的规范。</p>
-<p>需要注意代码中的  { }  在Java语言中，并没用像Python一样严格的规定程序的书写格式。<br>在Java中 大括号 就代表程序的一部分。通常我们定义一个类时，将类的内容包含起来。在for循环时，大括号里的内容就是循环体。函数定义时，大括号里的内容就是函数体。</p>
-<p><strong>static</strong>  我们通常将 main 都用static修饰。我们将域分成静态域和实例域。如果将域定义成静态static，那每一个类中只有一个这样的域。而类可以声明无数的对象，每一个对象对于所有的实例域都有自己的一份数据。<br>对于static目前可以简单的了解，以后会详细讲解。</p>
-<p><strong>注释</strong>  Java的注释不会出现在可执行程序中。因此可以在源程序中根据需要添加注释。<br>添加注释通常有三种</p>
+              <h2 id="Linux内核体系结构"><a href="#Linux内核体系结构" class="headerlink" title="Linux内核体系结构"></a>Linux内核体系结构</h2><h3 id="一、操作系统"><a href="#一、操作系统" class="headerlink" title="一、操作系统"></a>一、操作系统</h3><h4 id="操作系统的架构"><a href="#操作系统的架构" class="headerlink" title="操作系统的架构"></a>操作系统的架构</h4><p>一个完整的操作系统主要由四部分组成：硬件层、操作系统内核层、操作系统服务层和用户应用程序层。</p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210629225725.png" srcset="/img/loading.gif" lazyload alt="操作系统结构"></p>
+<p>用户应用程序层：是指那些字处理程序，Internet浏览器程序。以及一些用户自己编写的应用程序。</p>
+<p>操作系统服务层：是指那些向用户提供的服务被看做时操作系统部分功能的程序。比如X窗口系统、shell命令解释系统以及内核编程接口等系统程序。</p>
+<p>操作系统内核层：主要用于对硬件资源的抽象和访问调度。与硬件之间交互，实现对硬件部件的编程控制和接口操作。</p>
+<h4 id="Linux内核模式"><a href="#Linux内核模式" class="headerlink" title="Linux内核模式"></a>Linux内核模式</h4><p>操作系统内核的结构模式主要分成整体式的单内核模式和层次式的微内核模式。</p>
+<p>对于Linux 0.11内核，则是采用了单内核模式。</p>
+<p>操作系统所提供服务的流程为：</p>
 <ol>
-<li>单行注释<br><code>System.out.println(&quot;Hello World&quot;);//控制台打印</code></li>
-<li>长篇注释<br>不可以嵌套使用<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">      控制台打印</span><br><span class="hljs-comment">      Hello World</span><br><span class="hljs-comment">       */</span><br>      System.out.println(<span class="hljs-string">&quot;Hello World&quot;</span>);<br></code></pre></td></tr></table></figure></li>
-<li>文档注释<br>自动地生成文档。这种注释以 /** 开始， 以 */ 结束，可以与任何注释类型嵌套使用</li>
+<li><p>应用程序使用指定的参数值执行系统调用命令，使CPU从用户态切换为内核态。</p>
+</li>
+<li><p>然后操作系统根据具体的参数值调用特定的系统调用服务程序。</p>
+</li>
+<li><p>服务程序根据需要调用底层的一些支持函数完成特定的功能。</p>
+</li>
+<li><p>完成应用程序所要求的服务之后，操作系统又使CPU从核心态转换为用户态。</p>
+</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * </span><br><span class="hljs-comment"> *This is the first sample program in Core Java Chapter 3</span><br><span class="hljs-comment"> * </span><br><span class="hljs-comment"> *©author J</span><br><span class="hljs-comment"> */</span><br>System.out.println(<span class="hljs-string">&quot;Hello World&quot;</span>);<br></code></pre></td></tr></table></figure>
-
-<p><strong>编译</strong><br>如果已经正确地命名了这个文件，并且源代码中没有任何错误，在编译这段源代码之后就会自动得到一个FirstDame.class文件，并且与源代码存储在同一目录下。</p>
+<p>因此，单内核也可粗略地分成三个层次：</p>
+<ul>
+<li>调用服务的主程序层</li>
+<li>执行系统调用的服务层</li>
+<li>支持系统调用的底层函数</li>
+</ul>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210629225930.png" srcset="/img/loading.gif" lazyload alt="单模式简单结构模型"></p>
+<h3 id="二、Linux内核系统体系结构"><a href="#二、Linux内核系统体系结构" class="headerlink" title="二、Linux内核系统体系结构"></a>二、Linux内核系统体系结构</h3><p>Linux 内核主要由5个模式构成，分别是：进程调度模块、内存管理模块、文件系统模块、进程间通信模块和网络接口模块。</p>
+<p><strong>进程调用模块：</strong>负责进程对CPU资源的使用。所采用的调度策略是各个进程能够公平合理地访问CPU，保证内核能及时地执行硬件操作。</p>
+<p><strong>内存管理模块：</strong>用于确保进程能够安全地共享机器主内存区。同时，内存管理模块还支持<code>虚拟内存管理方式</code>。</p>
+<p><strong>文件系统模块：</strong>用于支持对外部设备的驱动和存储。虚拟文件系统模块通过向所有的外部存储设备提供一个通用的文件接口，隐藏了各种硬件设备的不同细节。</p>
+<p><strong>进程间通信模块：</strong>用于支持多种进程间的信息交换方式。</p>
+<p><strong>网络接口模块：</strong>提供对多种网络通信标准的访问并支持许多网络硬件。</p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210629232157.png" srcset="/img/loading.gif" lazyload alt="Linux内核结构框图"></p>
+<p>Linux 内核中各个模块之间存在依赖关系。比如：</p>
+<p>所有的模块都与进程调度模块存在依赖关系。因为它们都需要依靠进程调度程序来挂起或重新运行它们的进程。</p>
+<p>进程调度子系统需要使用内存管理来调整一特定进程所使用的物理内存空间。</p>
+<p>进程间通信子系统需要依靠内存管理器来支持共享内存通信机制。</p>
+<p>除了模块之间的依赖关系，所有的这些模块还会依赖于内核中的通用资源。这些资源包括内核所有子系统都会调用的内存分配和收回函数，打印警告或出错信息函数以及一些系统调试函数。</p>
 
             </div>
             <hr>
@@ -243,7 +263,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                      <a class="hover-with-bg" href="/tags/Linux%E5%86%85%E6%A0%B8/">Linux内核</a>
                     
                   </div>
                 
@@ -260,15 +280,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/01/06/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">浅拷贝和深拷贝</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2021/06/15/ReentrantLock/">
+                        <span class="hidden-mobile">ReentrantLock的使用</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
