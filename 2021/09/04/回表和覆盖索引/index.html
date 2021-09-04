@@ -18,7 +18,7 @@
   <meta name="author" content="蒋志伟">
   <meta name="keywords" content="">
   
-  <title>聚簇索引和非聚簇索引 - Joy-J博客</title>
+  <title>回表和覆盖索引 - Joy-J博客</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -151,7 +151,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="聚簇索引和非聚簇索引">
+            <span class="h2" id="subtitle" title="回表和覆盖索引">
               
             </span>
 
@@ -161,7 +161,7 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-04 18:21" pubdate>
+      <time datetime="2021-09-04 20:07" pubdate>
         September 4, 2021 pm
       </time>
     </span>
@@ -173,7 +173,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      818 字
+      497 字
     </span>
   
 
@@ -183,7 +183,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      5
        分钟
     </span>
   
@@ -213,34 +213,49 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">聚簇索引和非聚簇索引</h1>
+            <h1 style="display: none">回表和覆盖索引</h1>
             
             <div class="markdown-body">
-              <h2 id="聚簇索引和非聚簇索引"><a href="#聚簇索引和非聚簇索引" class="headerlink" title="聚簇索引和非聚簇索引"></a>聚簇索引和非聚簇索引</h2><p>简单来说：</p>
-<p><strong>聚簇索引就是将数据和索引存储在一块，索引结构的叶子结点保存了数据。</strong></p>
-<p><strong>非聚簇索引就是将数据和索引存储在一块，索引结构的叶子结点指向了数据对应的数据。</strong></p>
-<p>在InnoDB中主键使用的时聚簇索引。MyISAM不管是主键索引还是二级索引都是使用的非聚簇索引。</p>
-<h3 id="聚簇索引"><a href="#聚簇索引" class="headerlink" title="聚簇索引"></a>聚簇索引</h3><p><code>The InnoDB term for a primary key index. InnoDB table storage is organized based on the values of the primary key columns, to speed up queries and sorts involving the primary key columns. For best performance, choose the primary key columns carefully based on the most performance-critical queries. Because modifying the columns of the clustered index is an expensive operation, choose primary columns that are rarely or never updated</code></p>
-<p>**The InnoDB term for a primary key index(InnoDB术语，表示主键索引). **</p>
-<p>因为索引和数据是一起存储的，因此我们找到了索引就找到了数据。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210624223821.png" srcset="/img/loading.gif" lazyload alt="InnoDB(图取自https://my.oschina.net/xiaoyoung/blog/3046779)"></p>
-<p>在InnoDB中，表中一定会有主键，如果没有自定义主键，那么InnoDB会选择一个<strong>唯一且非空</strong>的索引来代替。如果没有索引，InnoDB会隐式的定义一个主键来作为聚簇索引。</p>
-<p>主键使用聚簇索引，因此通过主键构造一棵B+树，叶子结点全是数据。我们通过主键索引，可以快速的查找到我们需要的数据。</p>
-<p>在InooDB 中，我们定义除主键索引之外的索引，称为辅助索引（唯一索引，多列索引等）。<strong>辅助索引叶子结点存储的不再是行的物理位置，而是主键值，通过这个主键值，可以从主键所用构建的B+树快速查找数据。</strong></p>
-<h3 id="非聚簇索引"><a href="#非聚簇索引" class="headerlink" title="非聚簇索引"></a>非聚簇索引</h3><p>MyISAM使用的是非聚簇索引，索引的存储和数据的存储是分离的，也就是说找到了所以但没找到数据，需要根据<strong>索引上的值（主键）再次回表查询</strong>，非聚簇索引也叫做辅助索引。</p>
-<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210624223722.png" srcset="/img/loading.gif" lazyload alt="MyISAM图取自https://my.oschina.net/xiaoyoung/blog/304677"></p>
-<p>在MyISAM中，主键索引构建的B+树中，叶子结点存储了主键，辅助索引构建的B+树中，叶子结点存储了辅助索引。</p>
-<p>索引的叶子节点都指向对应的数据。</p>
-<h3 id="聚簇索引和非聚簇索引对比"><a href="#聚簇索引和非聚簇索引对比" class="headerlink" title="聚簇索引和非聚簇索引对比"></a>聚簇索引和非聚簇索引对比</h3><p>对于InnoDB来说：每次使用辅助索引都要经过两次B+树查询。对于MyISAM来说，使用辅助索引只需一次B+树查询。</p>
-<p>看上去非聚簇的索引效率更高，InnoDB为何会使用非聚簇索引。</p>
-<ol>
-<li><p>行数据和聚簇索引的叶子结点存储在一起，同一页中会有多条数据，访问同一数据页不同的行记录时，已经把页加载到了Buffer中（缓存器），再次访问时，会在内存中访问，不必访问磁盘。</p>
-</li>
-<li><p>在InnoDB中，辅助索引的叶子结点存储的是主键值，而不是地址值。</p>
-</li>
-<li><p>因为MyISAM的主索引并非聚簇索引，那么他的数据的物理地址必然是凌乱的，拿到这些物理地址，按照合适的算法进行I/O读取，于是开始不停的寻道不停的旋转。聚簇索引则只需一次I/O。</p>
-</li>
-</ol>
+              <h3 id="回表"><a href="#回表" class="headerlink" title="回表"></a>回表</h3><p>在理解回表之前，需要了解<a target="_blank" rel="noopener" href="https://johnjoy.top/2021/09/04/%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%E5%92%8C%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/">聚簇索引和非聚簇索引</a>。</p>
+<p>在<code>InnoDB</code>，由聚簇索引和辅助键索引。</p>
+<p>聚簇索引就是将主键值和数据放在一起存储。</p>
+<p>辅助键索引就是将索引值和主键值放在一起存储。</p>
+<p>表数据</p>
+<p>表中有4列，其中ID是主键，设置age为普通索引。</p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904190237.png" srcset="/img/loading.gif" lazyload alt="表数据"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904192136.png" srcset="/img/loading.gif" lazyload alt="索引"></p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904192950.png" srcset="/img/loading.gif" lazyload alt="索引的底层"></p>
+<p>执行SQL语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> ID,age <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">USER</span> <span class="hljs-keyword">WHERE</span> age <span class="hljs-operator">=</span> <span class="hljs-number">19</span><br></code></pre></td></tr></table></figure>
+
+<p>此时我们只需要通过普通索引就可以找到查询结果。因为在普通索引中有存储<code>age和ID值</code>。</p>
+<p>我们可以看这句SQL语句的执行计划</p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904193607.png" srcset="/img/loading.gif" lazyload alt="执行计划"></p>
+<p>使用到了索引<code>age_index</code>。</p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904193248.png" srcset="/img/loading.gif" lazyload alt="查询路径"></p>
+<p>执行SQL语句</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> ID,age,`enable` <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">USER</span> <span class="hljs-keyword">WHERE</span> age <span class="hljs-operator">=</span> <span class="hljs-number">19</span><br></code></pre></td></tr></table></figure>
+
+<p>此时就需要回表了。</p>
+<p>因为我们需要查询了不仅仅是ID和age，还需要<code>enable</code>，无法在普通索引中查询到全部字段。因此需要在主键索引创建的索引树中查找。</p>
+<p>查看这条SQL语句的执行计划</p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904194435.png" srcset="/img/loading.gif" lazyload alt="image-20210904194433634"></p>
+<p>这条SQL我们依旧使用到了<code>age_index索引</code>，但是注意，在Extra中没有了<code>Useing index</code>。</p>
+<p>查询路径</p>
+<p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904194315.png" srcset="/img/loading.gif" lazyload alt="查询路径"></p>
+<p>总结：</p>
+<p>回表就是先通过普通索引找到主键值，然后再根据主键来查询其他的字段。</p>
+<h3 id="覆盖索引"><a href="#覆盖索引" class="headerlink" title="覆盖索引"></a>覆盖索引</h3><p>在查询时，出现回表会降低性能。那么，如何避免回表查询？</p>
+<p>如果辅助索引上已经存在我们需要的数据,那么引擎就不会去主键上去搜索数据了，这就是覆盖索引。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> age <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-number">19</span>;<br></code></pre></td></tr></table></figure>
+
+<p>这条语句就符合覆盖索引的概念。在age的索引树中，我们可以获得我们需要查询的所有字段。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> ID,age,enable <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-number">19</span>;<br></code></pre></td></tr></table></figure>
+
+<p>这条就不符合覆盖索引的概念，需要回表。</p>
+<p>这就是为什么在这条SQL语句中的Extra中没有<code>Using index</code>。</p>
+<p>总结：</p>
+<p>辅助索引上已经存在我们需要的数据，不需要回表</p>
 
             </div>
             <hr>
@@ -268,18 +283,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/04/%E5%9B%9E%E8%A1%A8%E5%92%8C%E8%A6%86%E7%9B%96%E7%B4%A2%E5%BC%95/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">回表和覆盖索引</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/07/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E7%BD%91%E5%85%B3/">
-                        <span class="hidden-mobile">微服务组件 -- 网关</span>
+                      <a href="/2021/09/04/%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%E5%92%8C%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/">
+                        <span class="hidden-mobile">聚簇索引和非聚簇索引</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
