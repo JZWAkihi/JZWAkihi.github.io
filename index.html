@@ -170,6 +170,64 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/09/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ThreadLocal/" target="_self">
+          深入理解ThreadLocal
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/09/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ThreadLocal/" target="_self">
+          
+          
+            
+          
+          ThreadLocal多线程产生的线程安全性问题数据一致性问题：发生在多个主体对同一份数据无法达成共识。
+解决方法：
+
+排队：锁、互斥量、管程、屏障
+投票：Paxos算法、Raft算法
+
+这两种方法都会消耗额外的性能。
+ThreadLocal是能够避免数据一致性的。
+ThreadLocal使用定义：
+
+提供线程局部变量
+一个线程局部变量在多个线程中，分别有多个独立的值。
+
+特点：
+
+简单(开箱即用
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-09-05 21:22" pubdate>
+              2021-09-05
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/09/04/%E5%9B%9E%E8%A1%A8%E5%92%8C%E8%A6%86%E7%9B%96%E7%B4%A2%E5%BC%95/" target="_self">
           回表和覆盖索引
         </a>
@@ -590,53 +648,6 @@
               <a href="/tags/Redis%E5%AE%9E%E7%8E%B0/">Redis实现</a>
             
               <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/06/29/Linux%E5%86%85%E6%A0%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" target="_self">
-          Linux内核体系结构
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/06/29/Linux%E5%86%85%E6%A0%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" target="_self">
-          
-          
-            
-          
-          Linux内核体系结构一、操作系统操作系统的架构一个完整的操作系统主要由四部分组成：硬件层、操作系统内核层、操作系统服务层和用户应用程序层。
-
-用户应用程序层：是指那些字处理程序，Internet浏览器程序。以及一些用户自己编写的应用程序。
-操作系统服务层：是指那些向用户提供的服务被看做时操作系统部分功能的程序。比如X窗口系统、shell命令解释系统以及内核编程接口等系统程序。
-操作系统内核层：主
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-06-29 23:24" pubdate>
-              2021-06-29
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux%E5%86%85%E6%A0%B8/">Linux内核</a>
             
           </div>
         
