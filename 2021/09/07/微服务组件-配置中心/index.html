@@ -173,7 +173,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.5k 字
+      1.9k 字
     </span>
   
 
@@ -183,7 +183,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      18
+      23
        分钟
     </span>
   
@@ -315,6 +315,35 @@
 <p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210907115013.png" srcset="/img/loading.gif" lazyload alt="修改之后"></p>
 <p>弊端：</p>
 <p>需要手动发送POST请求才能刷新，并且一次只更新一个配置。</p>
+<h3 id="四、自动刷新"><a href="#四、自动刷新" class="headerlink" title="四、自动刷新"></a>四、自动刷新</h3><p>使用<code>Spring Cloud Bus</code>实现配置的自动刷新。</p>
+<p> Bus称之为<code>Spring Cloud Bus</code>中消息总线,主要用来在微服务系统中实现远端配置更新时通过广播形式通知所有客户端刷新配置信息,避免手动重启服务的工作</p>
+<p><code>Spring Cloud Bus</code>使用轻量级消息代理将分布式系统的节点连接起来。然后，可以使用它来广播状态更改（例如配置更改）或其他管理指令。<code>AMQP</code>和<code>Kafka broker</code>实现包含在项目中。或者，在类路径上找到的任何<code>SpringCloudStream</code>绑定器都可以作为传输使用。</p>
+<p><img src="D:\Document\Code\资料\springcloud资料\springcloud资料\笔记(含alibaba笔记" srcset="/img/loading.gif" lazyload alt="image-20200723150335451">\SpringCloud 微服务工具集v1.1.assets\image-20200723150335451.png)</p>
+<h4 id="1、引入依赖"><a href="#1、引入依赖" class="headerlink" title="1、引入依赖"></a>1、引入依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--引入bus依赖--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.cloud<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-cloud-starter-bus-amqp<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2、安装RabbitMQ"><a href="#2、安装RabbitMQ" class="headerlink" title="2、安装RabbitMQ"></a>2、安装RabbitMQ</h4><h4 id="3、-服务端配置-–-配置统一配置中心连接到MQ"><a href="#3、-服务端配置-–-配置统一配置中心连接到MQ" class="headerlink" title="3、 服务端配置 – 配置统一配置中心连接到MQ"></a>3、 服务端配置 – 配置统一配置中心连接到MQ</h4><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-meta">spring.rabbitmq.port</span>=<span class="hljs-string">5672</span><br><span class="hljs-meta">spring.rabbitmq.host</span>=<span class="hljs-string">192.168.111.128</span><br><span class="hljs-meta">spring.rabbitmq.username</span>=<span class="hljs-string">guest</span><br><span class="hljs-meta">spring.rabbitmq.password</span>=<span class="hljs-string">guest									#连接mq密码</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\JiangZW\AppData\Roaming\Typora\typora-user-images\image-20210907211722645.png" srcset="/img/loading.gif" lazyload alt="消息队列"></p>
+<h4 id="4、客户端配置"><a href="#4、客户端配置" class="headerlink" title="4、客户端配置"></a>4、客户端配置</h4><p>添加配置</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-comment"># bus消息总线时必须开启连接远程服务失败报错</span><br><span class="hljs-meta">spring.cloud.config.fail-fast</span>=<span class="hljs-string">true</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="5、刷新"><a href="#5、刷新" class="headerlink" title="5、刷新"></a>5、刷新</h4><p>配置统一刷新:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">curl -X POST http://localhost:7878/actuator/bus-refresh<br></code></pre></td></tr></table></figure>
+
+
+
+<p>我们还可以指定服务进行刷新配置：</p>
+<p>指定一个服务集群刷新：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">curl -X POST http://localhost:7878/actuator/bus-refresh/configclient<br></code></pre></td></tr></table></figure>
+
+<p>指定一个具体服务节点刷新：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">curl -X POST http://localhost:7878/actuator/bus-refresh/configclient:9090<br></code></pre></td></tr></table></figure>
+
+
+
+<p>此时，我们可以实现统一刷新，但依然需要发送POST请求才能刷新配置。</p>
 
             </div>
             <hr>
@@ -341,6 +370,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2021/09/08/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-Alibaba%E5%B7%A5%E5%85%B7%E9%9B%86/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">微服务组件-Alibaba工具集</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
