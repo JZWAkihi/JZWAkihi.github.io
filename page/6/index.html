@@ -170,6 +170,62 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2020/01/08/%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91%E5%92%8C%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/" target="_self">
+          线索二叉树和赫夫曼树
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/01/08/%E7%BA%BF%E7%B4%A2%E4%BA%8C%E5%8F%89%E6%A0%91%E5%92%8C%E8%B5%AB%E5%A4%AB%E6%9B%BC%E6%A0%91/" target="_self">
+          
+          
+            
+          
+          树线索二叉树问题引入：在该树中，1，2，3结点的左右指针并没有全部被利用。我们希望充分利用各个结点的左右指针，让各个结点指向自己的前后结点。
+解决方法：线索二叉树
+
+
+介绍线索二叉树
+n个结点的二叉链表含有n+1个空指针域。利用二叉链表中的空指针域，存放指向某种遍历次序下的前驱和后继结点的指针。
+线索二叉树可分成前序线索二叉树，中序线索二叉树，后序线索二叉树。
+
+
+
+如何实现线索二叉树
+我们中序遍
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-01-08 15:38" pubdate>
+              2020-01-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Java/">Java</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2020/01/08/%E9%80%92%E5%BD%92/" target="_self">
           递归
         </a>
@@ -363,24 +419,32 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/01/06/%E6%A0%88%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_self">
-          栈的实现
+        <a href="/2020/01/06/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" target="_self">
+          栈的使用
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/01/06/%E6%A0%88%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_self">
+        <a href="/2020/01/06/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" target="_self">
           
           
             
           
-          栈的特点栈(Stack)又称堆栈，是一种基于后进先出(LOFO)策略的集合类型。是限制在表的一端进行插入删除运算的线性表。栈可以用来在函数调用时存储断点，做递归时要用到栈。
-通常将能够进行插入和删除运算的这一端称为栈顶，另一端称为栈底。当表中没有元素时称为空栈。
-栈的常用运算：
+          栈的应用括号匹配问题
+问题：
+给出一个字符串，里面有三类括号：“（，）”、 “[，]”、 ”{，}”
+括号成队出现并且嵌套正确，返回true ；否则返回false；
 
-Pop():弹出操作，每次删除操作。
-Push():压入操作，将数据插进栈中。
-isFull():判断当前栈是否是空栈
+示例：
+input：“({()})”
+output: true
+input:”{(]}”
+output: false
+
+算法：
+依次扫描字符串。
+1、如果出现左括号【 ‘(’、‘[’ 、‘{’  】时。进栈。
+2、如果出现右括号【 
         </a>
       </p>
 
@@ -414,32 +478,24 @@ isFull():判断当前栈是否是空栈
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2020/01/06/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" target="_self">
-          栈的使用
+        <a href="/2020/01/06/%E6%A0%88%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_self">
+          栈的实现
         </a>
       </h1>
 
       <p class="index-excerpt">
-        <a href="/2020/01/06/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8/" target="_self">
+        <a href="/2020/01/06/%E6%A0%88%E7%9A%84%E5%AE%9E%E7%8E%B0/" target="_self">
           
           
             
           
-          栈的应用括号匹配问题
-问题：
-给出一个字符串，里面有三类括号：“（，）”、 “[，]”、 ”{，}”
-括号成队出现并且嵌套正确，返回true ；否则返回false；
+          栈的特点栈(Stack)又称堆栈，是一种基于后进先出(LOFO)策略的集合类型。是限制在表的一端进行插入删除运算的线性表。栈可以用来在函数调用时存储断点，做递归时要用到栈。
+通常将能够进行插入和删除运算的这一端称为栈顶，另一端称为栈底。当表中没有元素时称为空栈。
+栈的常用运算：
 
-示例：
-input：“({()})”
-output: true
-input:”{(]}”
-output: false
-
-算法：
-依次扫描字符串。
-1、如果出现左括号【 ‘(’、‘[’ 、‘{’  】时。进栈。
-2、如果出现右括号【 
+Pop():弹出操作，每次删除操作。
+Push():压入操作，将数据插进栈中。
+isFull():判断当前栈是否是空栈
         </a>
       </p>
 

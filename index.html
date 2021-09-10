@@ -170,6 +170,51 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/" target="_self">
+          Redis实现-压缩列表
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/" target="_self">
+          
+          
+            
+          
+          Redis实现-压缩列表一、压缩列表在Redis中的使用压缩列表(ziplist)是列表键和哈希键的底层实现之一。压缩列表是Redis为了节约内存而开发的。
+当一个列表项，并且每个列表项要么就是小整数值，要么就是比较短的字符串，那么Redis就会使用压缩列表来做列表键的底层实现。
+12127.0.0.1:6379&gt; rpush lst 1 3 5 10086 &quot;hello&quot
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-09-10 19:55" pubdate>
+              2021-09-10
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Redis/">Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E6%95%B4%E6%95%B0%E9%9B%86%E5%90%88/" target="_self">
           Redis实现-整数集合
         </a>
@@ -584,52 +629,6 @@ ThreadLocal使用定义：
             <i class="iconfont icon-date"></i>
             <time datetime="2021-07-15 19:00" pubdate>
               2021-07-15
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">微服务</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/07/14/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99%E4%BF%9D%E6%8A%A4/" target="_self">
-          微服务组件 -- 服务容错保护
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2021/07/14/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99%E4%BF%9D%E6%8A%A4/" target="_self">
-          
-          
-            
-          
-          微服务组件： Hystrix一、Hystrix 简介1、为什么需要容错保护在微服务架构中，我们将系统的按功能拆分了很多服务单元，各个服务单元都被注册在注册中心中。通过从注册中心获取的其他服务地址，来调用其他服务。实现服务之间的调用。
-比如：在一个电商网站中，我们可能将系统拆分为用户、订单、积分等服务单元。当用户创建一个订单的时候，
-
-各个服务单元相互调用，相互依赖。由于每个服务单元都在不同的进程中
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-07-14 10:57" pubdate>
-              2021-07-14
             </time>
           </div>
         
