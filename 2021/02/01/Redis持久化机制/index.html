@@ -290,7 +290,7 @@
 <p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210525160757.png" srcset="/img/loading.gif" lazyload alt="image-20210525160750233"></p>
 <h4 id="2、RDB"><a href="#2、RDB" class="headerlink" title="2、RDB"></a>2、RDB</h4><p>RDB就是以<strong>快照的形式</strong>对Redis中的数据进行持久化。</p>
 <p>RDB的启动方式：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">命令：</span><br><span class="line"><span class="code">	save</span></span><br><span class="line"><span class="code">作用：手动执行一次保存操作</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">命令：<br><span class="hljs-code">	save</span><br><span class="hljs-code">作用：手动执行一次保存操作</span><br></code></pre></td></tr></table></figure>
 
 <p>其中保存的数据在dump.rdb文件中。</p>
 <p>我们可以通过Redis的配置文件去修改dump.rdb文件的信息。</p>
@@ -309,14 +309,14 @@
 <p>当我们打开Redis服务器之后，Redis中的数据就会恢复到内存中。</p>
 <p>save指令出现的问题：</p>
 <p>对于单线程来说，当执行save指令时，时间过长，那么会阻塞当前的Redis服务器，直到RDB过程结束。</p>
-<h5 id="如何解决阻塞问题：—-bgsave"><a href="#如何解决阻塞问题：—-bgsave" class="headerlink" title="如何解决阻塞问题：—-bgsave"></a>如何解决阻塞问题：—-bgsave</h5><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">指令：</span><br><span class="line"><span class="code">	bgsave</span></span><br><span class="line"><span class="code">作用：手动启动后台保存操作，但不是立即执行，是在后台执行</span></span><br></pre></td></tr></table></figure>
+<h5 id="如何解决阻塞问题：—-bgsave"><a href="#如何解决阻塞问题：—-bgsave" class="headerlink" title="如何解决阻塞问题：—-bgsave"></a>如何解决阻塞问题：—-bgsave</h5><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">指令：<br><span class="hljs-code">	bgsave</span><br><span class="hljs-code">作用：手动启动后台保存操作，但不是立即执行，是在后台执行</span><br></code></pre></td></tr></table></figure>
 
 
 
 <p>bgsave的工作原理：</p>
 <p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210525163405.png" srcset="/img/loading.gif" lazyload alt="image-20210525163405855"></p>
 <p><code>bgsave命令是针对save阻塞问题做出的优化。Redis内部所有涉及到RDB操作都采用bgsave的方式，save命令可以放弃使用</code></p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">关于bgsave的配置信息：</span><br><span class="line">stop-writes-on-bgsave  yes</span><br><span class="line">说明：后台存储过程中如果出现错误现象，是否停止保存操作</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">关于bgsave的配置信息：<br>stop-writes-on-bgsave  yes<br>说明：后台存储过程中如果出现错误现象，是否停止保存操作<br></code></pre></td></tr></table></figure>
 
 <table>
 <thead>
@@ -347,7 +347,7 @@
 <td align="center">是</td>
 </tr>
 </tbody></table>
-<h5 id="RDB的自动保存"><a href="#RDB的自动保存" class="headerlink" title="RDB的自动保存"></a>RDB的自动保存</h5><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">配置：在redis配置文件中配置</span><br><span class="line">save second changes</span><br><span class="line">作用：满足限定时间范围内key的变化数量达到指定数量即进行持久化</span><br><span class="line"><span class="bullet"> -</span> second :监控时间范围</span><br><span class="line"><span class="bullet"> -</span> changes: 监控key的变化量</span><br><span class="line"> </span><br><span class="line"> save 900 1  # 如果在900s内变化了1个key。则执行save</span><br><span class="line"> save 300 10  # 如果在60s内变化了300个key。则执行save</span><br></pre></td></tr></table></figure>
+<h5 id="RDB的自动保存"><a href="#RDB的自动保存" class="headerlink" title="RDB的自动保存"></a>RDB的自动保存</h5><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs markdown">配置：在redis配置文件中配置<br>save second changes<br>作用：满足限定时间范围内key的变化数量达到指定数量即进行持久化<br><span class="hljs-bullet"> -</span> second :监控时间范围<br><span class="hljs-bullet"> -</span> changes: 监控key的变化量<br> <br> save 900 1  # 如果在900s内变化了1个key。则执行save<br> save 300 10  # 如果在60s内变化了300个key。则执行save<br></code></pre></td></tr></table></figure>
 
 
 
@@ -396,12 +396,12 @@
 </li>
 </ul>
 <p>AOF方式配置：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">配置：在Redis配置文件中</span><br><span class="line"></span><br><span class="line"><span class="bullet">1.</span> appendonly  yes</span><br><span class="line">是否开启AOF持久化功能。默认不开启</span><br><span class="line"></span><br><span class="line"><span class="bullet">2.</span> appendfsync always|everysec|no</span><br><span class="line">AOF写数据策略</span><br><span class="line"></span><br><span class="line"><span class="bullet">3.</span> appendfilename filename</span><br><span class="line">AOF持久化文件名，默认文件名未appendonly.aof</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs markdown">配置：在Redis配置文件中<br><br><span class="hljs-bullet">1.</span> appendonly  yes<br>是否开启AOF持久化功能。默认不开启<br><br><span class="hljs-bullet">2.</span> appendfsync always|everysec|no<br>AOF写数据策略<br><br><span class="hljs-bullet">3.</span> appendfilename filename<br>AOF持久化文件名，默认文件名未appendonly.aof<br></code></pre></td></tr></table></figure>
 
 
 
 <h5 id="AOF的重写"><a href="#AOF的重写" class="headerlink" title="AOF的重写"></a>AOF的重写</h5><p>如果我们执行以下指令</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set name zs</span><br><span class="line">set name ls</span><br><span class="line">set name ww</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown">set name zs<br>set name ls<br>set name ww<br></code></pre></td></tr></table></figure>
 
 <p>对于这样的操作，我们如何把每一个操作都保存下来，是没有意义的。所以需要AOF重写。</p>
 <p>随着命令不断写入AOF，文件会越来越大。</p>

@@ -291,7 +291,7 @@
 <p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904192136.png" srcset="/img/loading.gif" lazyload alt="索引"></p>
 <p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904192950.png" srcset="/img/loading.gif" lazyload alt="索引的底层"></p>
 <p>执行SQL语句：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ID,age <span class="keyword">FROM</span> <span class="keyword">USER</span> <span class="keyword">WHERE</span> age <span class="operator">=</span> <span class="number">19</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> ID,age <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">USER</span> <span class="hljs-keyword">WHERE</span> age <span class="hljs-operator">=</span> <span class="hljs-number">19</span><br></code></pre></td></tr></table></figure>
 
 <p>此时我们只需要通过普通索引就可以找到查询结果。因为在普通索引中有存储<code>age和ID值</code>。</p>
 <p>我们可以看这句SQL语句的执行计划</p>
@@ -299,7 +299,7 @@
 <p>使用到了索引<code>age_index</code>。</p>
 <p><img src="https://gitee.com/Akihij/PicGo/raw/master/img/20210904193248.png" srcset="/img/loading.gif" lazyload alt="查询路径"></p>
 <p>执行SQL语句</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ID,age,`enable` <span class="keyword">FROM</span> <span class="keyword">USER</span> <span class="keyword">WHERE</span> age <span class="operator">=</span> <span class="number">19</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">SELECT</span> ID,age,`enable` <span class="hljs-keyword">FROM</span> <span class="hljs-keyword">USER</span> <span class="hljs-keyword">WHERE</span> age <span class="hljs-operator">=</span> <span class="hljs-number">19</span><br></code></pre></td></tr></table></figure>
 
 <p>此时就需要回表了。</p>
 <p>因为我们需要查询了不仅仅是ID和age，还需要<code>enable</code>，无法在普通索引中查询到全部字段。因此需要在主键索引创建的索引树中查找。</p>
@@ -312,10 +312,10 @@
 <p>回表就是先通过普通索引找到主键值，然后再根据主键来查询其他的字段。</p>
 <h3 id="覆盖索引"><a href="#覆盖索引" class="headerlink" title="覆盖索引"></a>覆盖索引</h3><p>在查询时，出现回表会降低性能。那么，如何避免回表查询？</p>
 <p>如果辅助索引上已经存在我们需要的数据,那么引擎就不会去主键上去搜索数据了，这就是覆盖索引。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> age <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> age <span class="operator">=</span> <span class="number">19</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> age <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-number">19</span>;<br></code></pre></td></tr></table></figure>
 
 <p>这条语句就符合覆盖索引的概念。在age的索引树中，我们可以获得我们需要查询的所有字段。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> ID,age,enable <span class="keyword">from</span> <span class="keyword">user</span> <span class="keyword">where</span> age <span class="operator">=</span> <span class="number">19</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> ID,age,enable <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-number">19</span>;<br></code></pre></td></tr></table></figure>
 
 <p>这条就不符合覆盖索引的概念，需要回表。</p>
 <p>这就是为什么在这条SQL语句中的Extra中没有<code>Using index</code>。</p>
