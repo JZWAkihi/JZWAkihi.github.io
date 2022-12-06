@@ -18,7 +18,7 @@
   
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/page/5/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -223,15 +223,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/10/14/MySQL-%E6%97%A5%E5%BF%97/" target="_self">
-          MySQL 日志
+        <a href="/2020/10/05/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" target="_self">
+          线程池
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/10/14/MySQL-%E6%97%A5%E5%BF%97/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/05/%E7%BA%BF%E7%A8%8B%E6%B1%A0/" target="_self">
         <div>
-          MySQL日志一、错误日志MySQL错误日志记录了mysql启动和停止时，以及服务器在运行过程中发生任何严重错误的相关信息，当数据库出现任何障碍导致无法正常使用时，可以首先查看此日志。 错误日志是默认开启的，默认存放的目录为MySQL的数据目录(var/log)，默认的日志文件名为mysqld.log。 查看日志位置指令： 1show variables like &#x27;log_error%
+          线程池1、为什么使用线程池Java中的线程池是运用场景最多的并发框架，几乎所有需要异步或并发执行的任务的程序都可以使用线程池。	 线程池的使a用能够带来三个好处：  降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁的消耗。 提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行。 提高线程的可管理性。线程是稀缺资源，如果无限制的创建，会消耗资源，降低系统的稳定性。  2、线程池
         </div>
       </a>
 
@@ -239,290 +239,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-10-14 14:19" pubdate>
-              2021-10-14
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/" target="_self">
-          Redis实现-压缩列表
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/" target="_self">
-        <div>
-          Redis实现-压缩列表一、压缩列表在Redis中的使用压缩列表(ziplist)是列表键和哈希键的底层实现之一。压缩列表是Redis为了节约内存而开发的。 当一个列表项，并且每个列表项要么就是小整数值，要么就是比较短的字符串，那么Redis就会使用压缩列表来做列表键的底层实现。 12127.0.0.1:6379&gt; rpush lst 1 3 5 10086 &quot;hello&quot
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-10 19:55" pubdate>
-              2021-09-10
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">#Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E6%95%B4%E6%95%B0%E9%9B%86%E5%90%88/" target="_self">
-          Redis实现-整数集合
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E6%95%B4%E6%95%B0%E9%9B%86%E5%90%88/" target="_self">
-        <div>
-          Redis实现-整数集合一、整数集合在Redis中的使用整数集合(intset)是集合键的底层实现之一。当一个集合只包含整数值元素，并且这个集合的元素数量不多时，Redis就会使用整数集合作为集合键的底层实现。 12345678127.0.0.1:6379&gt; sadd members 1 3 5 7 9(integer) 5127.0.0.1:6379&gt; smembers member
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-10 14:12" pubdate>
-              2021-09-10
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">#Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E8%B7%B3%E8%B7%83%E8%A1%A8/" target="_self">
-          Redis实现-跳跃表
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E8%B7%B3%E8%B7%83%E8%A1%A8/" target="_self">
-        <div>
-          Redis实现-跳跃表一、什么是跳跃表跳跃表(skiplist)是一种有序数据结构，它通过在每个节点中维持多个指向其他节点的指针，从而达到快速访问节点的目的。 跳跃表支持平均O(logN)、最坏O(N)复杂度。 在大部分情况下，跳跃表的效率可以和平衡树相媲美，并且因为跳跃表的实现比平衡树要更简单。  123451. 一个跳跃表应该有若干个层（Level）链表组成2. 跳跃表中最底层的链表包含所有数
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-10 14:12" pubdate>
-              2021-09-10
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">#Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/09/Redis%E5%AE%9E%E7%8E%B0-%E5%AD%97%E5%85%B8/" target="_self">
-          Redis实现-字典
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/09/Redis%E5%AE%9E%E7%8E%B0-%E5%AD%97%E5%85%B8/" target="_self">
-        <div>
-          Redis实现 - 字典一、字典在Redis的使用1.字典简述字典又称为映射 – map，是一种用于保存键值对（K - V）的抽象数据结构。 在map中，一个键(K)对应一个值(V)，这对关联的键和值称为键值对。 字典中的键都是唯一的。因此，我们可以通过键来改变值，或者删除整个键值对。 2.在Redis中的使用字典在Redis中的应用非常广泛，比如，Redis的数据库就是使用字典来作为底层实现的。
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-09 19:55" pubdate>
-              2021-09-09
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
-            
-              <a href="/tags/Redis/">#Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/08/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-Alibaba%E5%B7%A5%E5%85%B7%E9%9B%86/" target="_self">
-          微服务组件-Alibaba工具集
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/08/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-Alibaba%E5%B7%A5%E5%85%B7%E9%9B%86/" target="_self">
-        <div>
-          Spring  Cloud Alibaba 工具集一、Alibaba 工具集概述1https://spring.io/projects/spring-cloud-alibaba  阿里云为分布式应用开发提供了一站式解决方案。它包含了开发分布式应用程序所需的所有组件，使您可以轻松地使用SpringCloud开发应用程序。 有了阿里云，你只需要添加一些注解和少量的配置，就可以将Spring云应用连接到
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-08 13:57" pubdate>
-              2021-09-08
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">#微服务</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" target="_self">
-          微服务组件-配置中心
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" target="_self">
-        <div>
-          微服务组件 - 配置中心一、什么是配置中心(Config)1、配置中心简述对于传统的单体应用而言， 我们使用的配置文件可以管理整个系统。比如，SpringBoot中的application.yml文件可以管理整个SpringBoot项目。 但是在微服务架构中，我们将整个应用分成多个微小的服务，每一个服务可以看成一个单体应用，就可以通过配置文件来管理。这样如果系统拥有几十个服务，那么配置文件太多了，
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-07 12:02" pubdate>
-              2021-09-07
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">#微服务</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ThreadLocal/" target="_self">
-          深入理解ThreadLocal
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ThreadLocal/" target="_self">
-        <div>
-          ThreadLocal多线程产生的线程安全性问题数据一致性问题：发生在多个主体对同一份数据无法达成共识。 解决方法：  排队：锁、互斥量、管程、屏障 投票：Paxos算法、Raft算法  这两种方法都会消耗额外的性能。 ThreadLocal是能够避免数据不一致性的。 ThreadLocal使用定义：  提供线程局部变量 一个线程局部变量在多个线程中，分别有多个独立的值。  特点：  简单(开箱即
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-05 21:22" pubdate>
-              2021-09-05
+            <time datetime="2020-10-05 15:38" pubdate>
+              2020-10-05
             </time>
           </div>
         
@@ -533,6 +251,8 @@
             
               <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">#多线程</a>
             
+              <a href="/tags/Java/">#Java</a>
+            
           </div>
         
       </div>
@@ -545,15 +265,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/09/04/%E5%9B%9E%E8%A1%A8%E5%92%8C%E8%A6%86%E7%9B%96%E7%B4%A2%E5%BC%95/" target="_self">
-          回表和覆盖索引
+        <a href="/2020/09/20/%E5%8F%8D%E5%B0%84%E4%B8%8E%E6%B3%A8%E8%A7%A3/" target="_self">
+          反射和注解
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/04/%E5%9B%9E%E8%A1%A8%E5%92%8C%E8%A6%86%E7%9B%96%E7%B4%A2%E5%BC%95/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/09/20/%E5%8F%8D%E5%B0%84%E4%B8%8E%E6%B3%A8%E8%A7%A3/" target="_self">
         <div>
-          回表在理解回表之前，需要了解聚簇索引和非聚簇索引。 在InnoDB，由聚簇索引和辅助键索引。 聚簇索引就是将主键值和数据放在一起存储。 辅助键索引就是将索引值和主键值放在一起存储。 表数据 表中有4列，其中ID是主键，设置age为普通索引。    执行SQL语句： 1SELECT ID,age FROM USER WHERE age = 19  此时我们只需要通过普通索引就可以找到查询结果。因为在
+          反射反射机制概述反射被视为动态语言的关键，反射机制允许程序在执行期间借助Reflection API 取得任何类的内部信息，并能直接操作任何对象的内部属性和方法。 加载完类之后，在堆内存的方法区中就产生了一个Class类型的对象（一个类只有一个对象），这个对象就包含了完整类的结构信息。 Java反射机制研究及应用：  在运行是判断任何一个对象所属的类 在运行时构造任意一个类的对象 在运行时判断任意
         </div>
       </a>
 
@@ -561,8 +281,48 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-04 20:07" pubdate>
-              2021-09-04
+            <time datetime="2020-09-20 15:38" pubdate>
+              2020-09-20
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Java/">#Java</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/09/06/%E4%BA%8B%E5%8A%A1/" target="_self">
+          事务
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/09/06/%E4%BA%8B%E5%8A%A1/" target="_self">
+        <div>
+          什么是事务1保证业务操作完整性的一种数据库机制  事务(ACID)1234567891011121314151617# 事务四大特性(ACID)## 原子性(Atomicity)	原子性是指事务包含的所有操作要么全部成功，要么全部失败回滚。	因此事务的操作如果成功就必须要完全应用到数据库，如果操作失败则不能对数据库有任何影响。## 一致性(Consistency)	事务开始前和结束后，数据库的完整
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-06 15:38" pubdate>
+              2020-09-06
             </time>
           </div>
         
@@ -585,15 +345,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/09/04/%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%E5%92%8C%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/" target="_self">
-          聚簇索引和非聚簇索引
+        <a href="/2020/08/06/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%92%8C%E9%81%8D%E5%8E%86/" target="_self">
+          二叉树的实现和遍历
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/04/%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%E5%92%8C%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/08/06/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%92%8C%E9%81%8D%E5%8E%86/" target="_self">
         <div>
-          聚簇索引和非聚簇索引简单来说： 聚簇索引就是将数据和索引存储在一块，索引结构的叶子结点保存了数据。 非聚簇索引就是将数据和索引存储在一块，索引结构的叶子结点指向了数据对应的数据。 在InnoDB中主键使用的时聚簇索引。MyISAM不管是主键索引还是二级索引都是使用的非聚簇索引。 聚簇索引The InnoDB term for a primary key index. InnoDB table st
+          树树(Tree)形结构是一种重要的非线性结构。树形结构反映了数据元素之间的层次关系和分支关系。 基本术语 ​        一个结点的子树个数称为该结点的度(degree)，一棵树中结点度的最大值称为该树的度。度为0的结点称为叶子结点或者终端结点。 ​		树中结点的后继结点称为儿子结点，结点的前趋结点称为儿子的父亲结点。		 ​		结点的层数使从根开始算起的。设根节点的层数为1，其他结点的层数等于
         </div>
       </a>
 
@@ -601,8 +361,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-04 18:21" pubdate>
-              2021-09-04
+            <time datetime="2020-08-06 15:38" pubdate>
+              2020-08-06
             </time>
           </div>
         
@@ -611,7 +371,257 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+              <a href="/tags/Java/">#Java</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">#数据结构与算法</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/07/01/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+          Git
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/07/01/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+        <div>
+          Git命令1234567# Git 配置git config                                  查看git配置git config -- global user.name  &quot;&quot;git config -- global user.email &quot;&quot;  123456# 查看当前状态git status可以根据文件的颜色来判断当前的
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-07-01 15:38" pubdate>
+              2020-07-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/03/08/HashMap%E6%BA%90%E7%A0%81/" target="_self">
+          HashMap源码
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/03/08/HashMap%E6%BA%90%E7%A0%81/" target="_self">
+        <div>
+          HashMap源码1、简介123456789101112131415161718HashMap是基于哈希表的Map接口的实现，是以key-value存储形式存在，即主要用来存放键值对，HashMap的实现不是同步的，这意味着它不是线程安全的，它的key、value都可以为nullHashMap中的映射下不是有序的。java1.8之前的HashMap由数组-链表组成的，数组是HashMap主体，链表
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-08 15:38" pubdate>
+              2020-03-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Java/">#Java</a>
+            
+              <a href="/tags/%E5%AE%B9%E5%99%A8/">#容器</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/02/08/Servlet/" target="_self">
+          Servlet 编程
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/02/08/Servlet/" target="_self">
+        <div>
+          Servlet 编程基础  Servlet 是连接 Web 服务器与服务端 Java 程序的协议，是一种通信规范。这个规范是以一套接口的形式体现的。  Servlet 规范中包含一套接口。而 Servlet 接口仅仅是其中之一。   微观地讲，Servlet 是 Servlet 接口实现类的一个实例对象，是运行在服务器上的一段 Java小程序，即 Server Applet，也就是 Servlet
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-02-08 15:38" pubdate>
+              2020-02-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Java/">#Java</a>
+            
+              <a href="/tags/Web/">#Web</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/02/08/cookie%E3%80%81session/" target="_self">
+          Cookie和Session
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/02/08/cookie%E3%80%81session/" target="_self">
+        <div>
+          1、Cookie1.1、Cookie概述我们打开163邮箱官方。https://mail.163.com/  输入账号和密码，并且点击十天内免登录。进入邮箱。 当我们关闭浏览器或关闭电脑之后，我们再次进入邮箱。https://mail.163.com/ 此时我们不需要输入用户名和密码。说明：我们的账号和密码是保存在客户端，并且是在客户端的硬盘上，而不是内存中。 客户端电脑中用于保存这些会话状态的资
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-02-08 15:38" pubdate>
+              2020-02-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Java/">#Java</a>
+            
+              <a href="/tags/Web/">#Web</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/02/08/ArrayList%E6%BA%90%E7%A0%81/" target="_self">
+          ArrayList源码
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/02/08/ArrayList%E6%BA%90%E7%A0%81/" target="_self">
+        <div>
+          ArrayList1、ArrayList的底层 – 数组 数组结构的优缺点： 数组查询块，根据地址和索引直接获取元素 数组增删改慢，每次都需要创建新数组。且移动元素位置  2、ArrayList继承关系1234public class ArrayList&lt;E&gt; extends AbstractList&lt;E&gt;        implements List&lt;E&gt;,
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-02-08 15:38" pubdate>
+              2020-02-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Java/">#Java</a>
+            
+              <a href="/tags/%E5%AE%B9%E5%99%A8/">#容器</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/02/05/%E5%9F%BA%E4%BA%8E%E4%BD%8D%E5%9B%BE%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E7%AE%97%E6%B3%95/" target="_self">
+          基于位图的优先级算法
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/02/05/%E5%9F%BA%E4%BA%8E%E4%BD%8D%E5%9B%BE%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E7%AE%97%E6%B3%95/" target="_self">
+        <div>
+          12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455要求写就绪表，获取最高优先级怎样让任务进入退出就绪.6对应二进制为：000110高3位：000=0通过OSMapTbl映射后：OSMapTbl[prio&gt;&gt;3]=OSMapTbl[0]=
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-02-05 15:30" pubdate>
+              2020-02-05
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">#数据结构与算法</a>
             
           </div>
         
@@ -623,7 +633,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#board">7</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

@@ -18,7 +18,7 @@
   
     <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -223,15 +223,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/10/14/MySQL-%E6%97%A5%E5%BF%97/" target="_self">
-          MySQL 日志
+        <a href="/2021/07/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E7%BD%91%E5%85%B3/" target="_self">
+          微服务组件 -- 网关
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/10/14/MySQL-%E6%97%A5%E5%BF%97/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/07/15/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E7%BD%91%E5%85%B3/" target="_self">
         <div>
-          MySQL日志一、错误日志MySQL错误日志记录了mysql启动和停止时，以及服务器在运行过程中发生任何严重错误的相关信息，当数据库出现任何障碍导致无法正常使用时，可以首先查看此日志。 错误日志是默认开启的，默认存放的目录为MySQL的数据目录(var/log)，默认的日志文件名为mysqld.log。 查看日志位置指令： 1show variables like &#x27;log_error%
+          微服务组件：网关服务一、网关1、为什么需要网关我们已经了解了微服务的各个基础组件，这些组件已经可以构建一个简单的微服务模型：  注册中心：Eureka和consul，用于将各个微服务的信息注册，为了让其他的微服务知道这些信息。方便调用 服务调用：声明式调用组件OpenFeign，为了解决服务的集群调用，需要引入负载均衡组件Ribbon。 容错保护：在服务运行时，可能会出现雪崩，服务器宕机等。为了使
         </div>
       </a>
 
@@ -239,210 +239,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-10-14 14:19" pubdate>
-              2021-10-14
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/" target="_self">
-          Redis实现-压缩列表
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/" target="_self">
-        <div>
-          Redis实现-压缩列表一、压缩列表在Redis中的使用压缩列表(ziplist)是列表键和哈希键的底层实现之一。压缩列表是Redis为了节约内存而开发的。 当一个列表项，并且每个列表项要么就是小整数值，要么就是比较短的字符串，那么Redis就会使用压缩列表来做列表键的底层实现。 12127.0.0.1:6379&gt; rpush lst 1 3 5 10086 &quot;hello&quot
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-10 19:55" pubdate>
-              2021-09-10
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">#Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E6%95%B4%E6%95%B0%E9%9B%86%E5%90%88/" target="_self">
-          Redis实现-整数集合
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E6%95%B4%E6%95%B0%E9%9B%86%E5%90%88/" target="_self">
-        <div>
-          Redis实现-整数集合一、整数集合在Redis中的使用整数集合(intset)是集合键的底层实现之一。当一个集合只包含整数值元素，并且这个集合的元素数量不多时，Redis就会使用整数集合作为集合键的底层实现。 12345678127.0.0.1:6379&gt; sadd members 1 3 5 7 9(integer) 5127.0.0.1:6379&gt; smembers member
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-10 14:12" pubdate>
-              2021-09-10
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">#Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E8%B7%B3%E8%B7%83%E8%A1%A8/" target="_self">
-          Redis实现-跳跃表
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/10/Redis%E5%AE%9E%E7%8E%B0-%E8%B7%B3%E8%B7%83%E8%A1%A8/" target="_self">
-        <div>
-          Redis实现-跳跃表一、什么是跳跃表跳跃表(skiplist)是一种有序数据结构，它通过在每个节点中维持多个指向其他节点的指针，从而达到快速访问节点的目的。 跳跃表支持平均O(logN)、最坏O(N)复杂度。 在大部分情况下，跳跃表的效率可以和平衡树相媲美，并且因为跳跃表的实现比平衡树要更简单。  123451. 一个跳跃表应该有若干个层（Level）链表组成2. 跳跃表中最底层的链表包含所有数
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-10 14:12" pubdate>
-              2021-09-10
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Redis/">#Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/09/Redis%E5%AE%9E%E7%8E%B0-%E5%AD%97%E5%85%B8/" target="_self">
-          Redis实现-字典
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/09/Redis%E5%AE%9E%E7%8E%B0-%E5%AD%97%E5%85%B8/" target="_self">
-        <div>
-          Redis实现 - 字典一、字典在Redis的使用1.字典简述字典又称为映射 – map，是一种用于保存键值对（K - V）的抽象数据结构。 在map中，一个键(K)对应一个值(V)，这对关联的键和值称为键值对。 字典中的键都是唯一的。因此，我们可以通过键来改变值，或者删除整个键值对。 2.在Redis中的使用字典在Redis中的应用非常广泛，比如，Redis的数据库就是使用字典来作为底层实现的。
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-09 19:55" pubdate>
-              2021-09-09
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
-            
-              <a href="/tags/Redis/">#Redis</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/08/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-Alibaba%E5%B7%A5%E5%85%B7%E9%9B%86/" target="_self">
-          微服务组件-Alibaba工具集
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/08/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-Alibaba%E5%B7%A5%E5%85%B7%E9%9B%86/" target="_self">
-        <div>
-          Spring  Cloud Alibaba 工具集一、Alibaba 工具集概述1https://spring.io/projects/spring-cloud-alibaba  阿里云为分布式应用开发提供了一站式解决方案。它包含了开发分布式应用程序所需的所有组件，使您可以轻松地使用SpringCloud开发应用程序。 有了阿里云，你只需要添加一些注解和少量的配置，就可以将Spring云应用连接到
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-08 13:57" pubdate>
-              2021-09-08
+            <time datetime="2021-07-15 19:00" pubdate>
+              2021-07-15
             </time>
           </div>
         
@@ -465,15 +263,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/09/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" target="_self">
-          微服务组件-配置中心
+        <a href="/2021/07/14/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99%E4%BF%9D%E6%8A%A4/" target="_self">
+          微服务组件 -- 服务容错保护
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/07/14/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99%E4%BF%9D%E6%8A%A4/" target="_self">
         <div>
-          微服务组件 - 配置中心一、什么是配置中心(Config)1、配置中心简述对于传统的单体应用而言， 我们使用的配置文件可以管理整个系统。比如，SpringBoot中的application.yml文件可以管理整个SpringBoot项目。 但是在微服务架构中，我们将整个应用分成多个微小的服务，每一个服务可以看成一个单体应用，就可以通过配置文件来管理。这样如果系统拥有几十个服务，那么配置文件太多了，
+          微服务组件： Hystrix一、Hystrix 简介1、为什么需要容错保护在微服务架构中，我们将系统的按功能拆分了很多服务单元，各个服务单元都被注册在注册中心中。通过从注册中心获取的其他服务地址，来调用其他服务。实现服务之间的调用。 比如：在一个电商网站中，我们可能将系统拆分为用户、订单、积分等服务单元。当用户创建一个订单的时候，  各个服务单元相互调用，相互依赖。由于每个服务单元都在不同的进程中
         </div>
       </a>
 
@@ -481,8 +279,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-07 12:02" pubdate>
-              2021-09-07
+            <time datetime="2021-07-14 10:57" pubdate>
+              2021-07-14
             </time>
           </div>
         
@@ -505,15 +303,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/09/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ThreadLocal/" target="_self">
-          深入理解ThreadLocal
+        <a href="/2021/07/12/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/" target="_self">
+          微服务组件 -- 服务调用
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/05/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3ThreadLocal/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/07/12/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/" target="_self">
         <div>
-          ThreadLocal多线程产生的线程安全性问题数据一致性问题：发生在多个主体对同一份数据无法达成共识。 解决方法：  排队：锁、互斥量、管程、屏障 投票：Paxos算法、Raft算法  这两种方法都会消耗额外的性能。 ThreadLocal是能够避免数据不一致性的。 ThreadLocal使用定义：  提供线程局部变量 一个线程局部变量在多个线程中，分别有多个独立的值。  特点：  简单(开箱即
+          服务调用在 SpringCloud 中服务间调用方式主要是使用 http restful方式进行服务间调用。 所谓的服务键调用，简单来说，就是我可以调用其他模块的接口。 比如： 在服务A中有一个接口。 12345678@RestControllerpublic AController&#123;        @GetMapping(&quot;/msga&quot;)    public Str
         </div>
       </a>
 
@@ -521,8 +319,252 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-05 21:22" pubdate>
-              2021-09-05
+            <time datetime="2021-07-12 15:11" pubdate>
+              2021-07-12
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">#微服务</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/09/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E6%9C%8D%E5%8A%A1%E6%B2%BB%E7%90%86/" target="_self">
+          微服务组件 -- 服务治理
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/07/09/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6-%E6%9C%8D%E5%8A%A1%E6%B2%BB%E7%90%86/" target="_self">
+        <div>
+          微服务组件 – 服务治理一、服务治理服务治理是微服务架构中最为核心和基础的模块，它是用于实现各个微服务实例的自动化注册与发现。 1、为什么需要服务治理我们可以通过做一些静态配置来完成服务的调用。比如，有两个服务A和B，其中服务A需要调用服务B来完成一个业务操作时，我们需要手工维护服务B的具体实例清单。 但是随着业务的发展，系统功能越来越复杂，相应的微服务应用也不断增加。我们的静态配置就会变得越来越
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-09 20:34" pubdate>
+              2021-07-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/">#微服务</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/09/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E8%AE%BE%E8%AE%A1/" target="_self">
+          消息中间件的设计
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/07/09/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E8%AE%BE%E8%AE%A1/" target="_self">
+        <div>
+          消息中间件的设计一、什么是消息中间件消息中间件的运用  上图是一个基于消息中间件的分布式系统架构。 用户想要实现某种功能，比如注册、创建订单、支付等。并没有通过前台系统直接去调用其他的子系统。而是将这个请求包装成消息和数据，暂时存放在消息中间件中。而其他子系统接受到这些消息后会去处理对应的请求。 好处： 解决系统之间的耦合。我们并没有实现系统与系统之间的直接调用。而是通过中间件的转换。 因此，什么
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-09 20:30" pubdate>
+              2021-07-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/">#中间件</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/05/Redis%E5%AE%9E%E7%8E%B0-%E9%93%BE%E8%A1%A8/" target="_self">
+          Redis实现 -- 链表
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/07/05/Redis%E5%AE%9E%E7%8E%B0-%E9%93%BE%E8%A1%A8/" target="_self">
+        <div>
+          Redis实现 – 链表一、链表的特点链表作为一种常用的数据结构，链表内置在许多的高级语言中，比如Java中：LinkedList等集合类工具。 链表是一种线性表，和数组不同的是，他不能随机访问结点，只能顺序的访问。同时它可以通过增删结点来灵活地调整链表的长度。  二、Redis中的链表C语言中没有设计这种数据结构，因此Redis构建了自己的链表实现。 1、链表的实现源代码在adlist.h中 1
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-05 14:48" pubdate>
+              2021-07-05
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/Redis/">#Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/07/05/Redis%E5%AE%9E%E7%8E%B0-%E5%8A%A8%E6%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
+          Redis实现 -- 动态字符串
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/07/05/Redis%E5%AE%9E%E7%8E%B0-%E5%8A%A8%E6%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_self">
+        <div>
+          简单的动态字符串一、C语言中的字符串字符串是一种非常重要的数据类型，在Java中，有专门的数据类型来表示字符串。比如String类型、StringBuffer类型等。但是在C语言中不存在显示的字符串类型，都是以字符串常量的形式出现或存储在字符数组中。 1、字符串常量所谓的字符串常量，就是：以’&#x2F;0’结尾的多个字符组成的序列。字符串常量是不可被修改的。 比如：”Hello world”，”
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-05 13:26" pubdate>
+              2021-07-05
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="/tags/Redis/">#Redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/06/29/Linux%E5%86%85%E6%A0%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" target="_self">
+          Linux内核体系结构
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/06/29/Linux%E5%86%85%E6%A0%B8%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" target="_self">
+        <div>
+          Linux内核体系结构一、操作系统操作系统的架构一个完整的操作系统主要由四部分组成：硬件层、操作系统内核层、操作系统服务层和用户应用程序层。  用户应用程序层：是指那些字处理程序，Internet浏览器程序。以及一些用户自己编写的应用程序。 操作系统服务层：是指那些向用户提供的服务被看做时操作系统部分功能的程序。比如X窗口系统、shell命令解释系统以及内核编程接口等系统程序。 操作系统内核层：主
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-06-29 23:24" pubdate>
+              2021-06-29
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Linux%E5%86%85%E6%A0%B8/">#Linux内核</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/06/15/ReentrantLock/" target="_self">
+          ReentrantLock的使用
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/06/15/ReentrantLock/" target="_self">
+        <div>
+          ReentrantLock相对于synchronized，它具备的特点是：  可中断 可以设置超时时间 可以设置为公平锁 支持多个条件变量  与synchronized一样，都支持可重入。 基本语法： 12345678//获取锁reentrantLock.lock();try&#123;	//临界区&#125;finally&#123;	//释放锁	reentrantLock.unlock();&
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-06-15 15:38" pubdate>
+              2021-06-15
             </time>
           </div>
         
@@ -533,45 +575,7 @@
             
               <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">#多线程</a>
             
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2021/09/04/%E5%9B%9E%E8%A1%A8%E5%92%8C%E8%A6%86%E7%9B%96%E7%B4%A2%E5%BC%95/" target="_self">
-          回表和覆盖索引
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/04/%E5%9B%9E%E8%A1%A8%E5%92%8C%E8%A6%86%E7%9B%96%E7%B4%A2%E5%BC%95/" target="_self">
-        <div>
-          回表在理解回表之前，需要了解聚簇索引和非聚簇索引。 在InnoDB，由聚簇索引和辅助键索引。 聚簇索引就是将主键值和数据放在一起存储。 辅助键索引就是将索引值和主键值放在一起存储。 表数据 表中有4列，其中ID是主键，设置age为普通索引。    执行SQL语句： 1SELECT ID,age FROM USER WHERE age = 19  此时我们只需要通过普通索引就可以找到查询结果。因为在
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-04 20:07" pubdate>
-              2021-09-04
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+              <a href="/tags/Java/">#Java</a>
             
           </div>
         
@@ -585,15 +589,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/2021/09/04/%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%E5%92%8C%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/" target="_self">
-          聚簇索引和非聚簇索引
+        <a href="/2021/05/01/Docker/" target="_self">
+          Docker
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2021/09/04/%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95%E5%92%8C%E9%9D%9E%E8%81%9A%E7%B0%87%E7%B4%A2%E5%BC%95/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/05/01/Docker/" target="_self">
         <div>
-          聚簇索引和非聚簇索引简单来说： 聚簇索引就是将数据和索引存储在一块，索引结构的叶子结点保存了数据。 非聚簇索引就是将数据和索引存储在一块，索引结构的叶子结点指向了数据对应的数据。 在InnoDB中主键使用的时聚簇索引。MyISAM不管是主键索引还是二级索引都是使用的非聚簇索引。 聚簇索引The InnoDB term for a primary key index. InnoDB table st
+          Dockerdocker中文网：https://vuepress.mirror.docker-practice.com/ 1、 什么是Docker什么是Docker 官方介绍： We have a complete container solution for you no matter who you are and where you are on your containerization
         </div>
       </a>
 
@@ -601,8 +605,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2021-09-04 18:21" pubdate>
-              2021-09-04
+            <time datetime="2021-05-01 15:38" pubdate>
+              2021-05-01
             </time>
           </div>
         
@@ -611,7 +615,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+              <a href="/tags/%E5%B7%A5%E5%85%B7/">#工具</a>
+            
+              <a href="/tags/%E5%AE%B9%E5%99%A8/">#容器</a>
             
           </div>
         
@@ -623,7 +629,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#board">7</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#board">7</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
