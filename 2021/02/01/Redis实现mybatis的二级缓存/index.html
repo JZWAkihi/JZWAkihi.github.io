@@ -16,12 +16,12 @@
   <meta name="author" content="John Joy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Mybatis中的二级缓存Myabtis 的二级缓存是如何实现的1234# 在Mybatis中开启二级缓存在Mapper.xml文件中加标签&lt;cache &#x2F;&gt;  开启二级缓存需要将实体类序列化，否则会出现错误	Cause: java.io.NotSerializableException: com.jiang.travels.entity.User  123# Mybatis的二级缓存">
+    <meta name="description" content="Mybatis中的二级缓存Myabtis 的二级缓存是如何实现的1234# 在Mybatis中开启二级缓存在Mapper.xml文件中加标签&lt;cache &#x2F;&gt;  开启二级缓存需要将实体类序列化，否则会出现错误	Cause: java.io.NotSerializableException: com.jiang.travels.entity.User  123# Mybatis的二级">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redis实现Mybatis二级缓存">
 <meta property="og:url" content="http://example.com/2021/02/01/Redis%E5%AE%9E%E7%8E%B0mybatis%E7%9A%84%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Mybatis中的二级缓存Myabtis 的二级缓存是如何实现的1234# 在Mybatis中开启二级缓存在Mapper.xml文件中加标签&lt;cache &#x2F;&gt;  开启二级缓存需要将实体类序列化，否则会出现错误	Cause: java.io.NotSerializableException: com.jiang.travels.entity.User  123# Mybatis的二级缓存">
+<meta property="og:description" content="Mybatis中的二级缓存Myabtis 的二级缓存是如何实现的1234# 在Mybatis中开启二级缓存在Mapper.xml文件中加标签&lt;cache &#x2F;&gt;  开启二级缓存需要将实体类序列化，否则会出现错误	Cause: java.io.NotSerializableException: com.jiang.travels.entity.User  123# Mybatis的二级">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210409091451.png">
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210409091649.png">
@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210409113713.png">
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210409114150.png">
 <meta property="article:published_time" content="2021-02-01T07:38:36.000Z">
-<meta property="article:modified_time" content="2022-12-06T15:31:53.415Z">
+<meta property="article:modified_time" content="2022-12-06T17:02:10.548Z">
 <meta property="article:author" content="John Joy">
 <meta property="article:tag" content="中间件">
 <meta property="article:tag" content="框架">
@@ -292,7 +292,9 @@
             
               <div class="markdown-body">
                 
-                <h2 id="Mybatis中的二级缓存"><a href="#Mybatis中的二级缓存" class="headerlink" title="Mybatis中的二级缓存"></a>Mybatis中的二级缓存</h2><h4 id="Myabtis-的二级缓存是如何实现的"><a href="#Myabtis-的二级缓存是如何实现的" class="headerlink" title="Myabtis 的二级缓存是如何实现的"></a>Myabtis 的二级缓存是如何实现的</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 在Mybatis中开启二级缓存</span><br>在Mapper.xml文件中加标签<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">cache</span> /&gt;</span></span>  <br>开启二级缓存需要将实体类序列化，否则会出现错误<br><span class="hljs-code">	Cause: java.io.NotSerializableException: com.jiang.travels.entity.User</span><br></code></pre></td></tr></table></figure>
+                <meta name="referrer" content="no-referrer" />
+
+<h2 id="Mybatis中的二级缓存"><a href="#Mybatis中的二级缓存" class="headerlink" title="Mybatis中的二级缓存"></a>Mybatis中的二级缓存</h2><h4 id="Myabtis-的二级缓存是如何实现的"><a href="#Myabtis-的二级缓存是如何实现的" class="headerlink" title="Myabtis 的二级缓存是如何实现的"></a>Myabtis 的二级缓存是如何实现的</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 在Mybatis中开启二级缓存</span><br>在Mapper.xml文件中加标签<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">cache</span> /&gt;</span></span>  <br>开启二级缓存需要将实体类序列化，否则会出现错误<br><span class="hljs-code">	Cause: java.io.NotSerializableException: com.jiang.travels.entity.User</span><br></code></pre></td></tr></table></figure>
 
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># Mybatis的二级缓存的实现</span><br>mybatis中有一个接口Cache。<br>mybatis二级缓存的实现类是PerpetualCache.java,实现的是接口Cache<br></code></pre></td></tr></table></figure>
 

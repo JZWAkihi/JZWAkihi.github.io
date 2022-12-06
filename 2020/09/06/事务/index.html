@@ -16,16 +16,16 @@
   <meta name="author" content="John Joy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="什么是事务1保证业务操作完整性的一种数据库机制  事务(ACID)1234567891011121314151617# 事务四大特性(ACID)## 原子性(Atomicity)	原子性是指事务包含的所有操作要么全部成功，要么全部失败回滚。	因此事务的操作如果成功就必须要完全应用到数据库，如果操作失败则不能对数据库有任何影响。## 一致性(Consistency)	事务开始前和结束后，数据库的完整">
+    <meta name="description" content="什么是事务1保证业务操作完整性的一种数据库机制  事务(ACID)1234567891011121314151617# 事务四大特性(ACID)## 原子性(Atomicity)	原子性是指事务包含的所有操作要么全部成功，要么全部失败回滚。	因此事务的操作如果成功就必须要完全应用到数据库，如果操作失败则不能对数据库有任何影响。## 一致性(Consistency)	事务开始前和结束后，数据库的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="事务">
 <meta property="og:url" content="http://example.com/2020/09/06/%E4%BA%8B%E5%8A%A1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="什么是事务1保证业务操作完整性的一种数据库机制  事务(ACID)1234567891011121314151617# 事务四大特性(ACID)## 原子性(Atomicity)	原子性是指事务包含的所有操作要么全部成功，要么全部失败回滚。	因此事务的操作如果成功就必须要完全应用到数据库，如果操作失败则不能对数据库有任何影响。## 一致性(Consistency)	事务开始前和结束后，数据库的完整">
+<meta property="og:description" content="什么是事务1保证业务操作完整性的一种数据库机制  事务(ACID)1234567891011121314151617# 事务四大特性(ACID)## 原子性(Atomicity)	原子性是指事务包含的所有操作要么全部成功，要么全部失败回滚。	因此事务的操作如果成功就必须要完全应用到数据库，如果操作失败则不能对数据库有任何影响。## 一致性(Consistency)	事务开始前和结束后，数据库的">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/a0b15ffdbf024a2291c34d374bd44192.png">
 <meta property="article:published_time" content="2020-09-06T07:38:36.000Z">
-<meta property="article:modified_time" content="2022-12-06T15:31:44.126Z">
+<meta property="article:modified_time" content="2022-12-06T17:08:11.824Z">
 <meta property="article:author" content="John Joy">
 <meta property="article:tag" content="数据库">
 <meta name="twitter:card" content="summary_large_image">
@@ -275,7 +275,9 @@
             
               <div class="markdown-body">
                 
-                <h4 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">保证业务操作完整性的一种数据库机制<br></code></pre></td></tr></table></figure>
+                <meta name="referrer" content="no-referrer" />
+
+<h4 id="什么是事务"><a href="#什么是事务" class="headerlink" title="什么是事务"></a>什么是事务</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">保证业务操作完整性的一种数据库机制<br></code></pre></td></tr></table></figure>
 
 <h4 id="事务-ACID"><a href="#事务-ACID" class="headerlink" title="事务(ACID)"></a>事务(ACID)</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 事务四大特性(ACID)</span><br><br><span class="hljs-section">## 原子性(Atomicity)</span><br><span class="hljs-code">	原子性是指事务包含的所有操作要么全部成功，要么全部失败回滚。</span><br><span class="hljs-code">	因此事务的操作如果成功就必须要完全应用到数据库，如果操作失败则不能对数据库有任何影响。</span><br><span class="hljs-code"></span><br><span class="hljs-section">## 一致性(Consistency)</span><br><span class="hljs-code">	事务开始前和结束后，数据库的完整性约束没有被破坏。比如A向B转账，不可能A扣了钱，B却没收到</span><br><span class="hljs-code">	</span><br><span class="hljs-code">## 隔离性(lsolation)</span><br><span class="hljs-code">	隔离性是当多个用户并发访问数据库时，比如操作同一张表时，数据库为每一个用户开启的事务，不能被其他事务的操作所干扰，多个并发事务之间要相互隔离。</span><br><span class="hljs-code">	同一时间，只允许一个事务请求同一数据，不同的事务之间彼此没有任何干扰。比如A正在从一张银行卡中取钱，在A取钱的过程结束前，B不能向这张卡转账。</span><br><span class="hljs-code">	</span><br><span class="hljs-code">## 持久性</span><br><span class="hljs-code">	持久性是指一个事务一旦被提交了，那么对数据库中的数据的改变就是永久性的，即便是在数据库系统遇到故障的情况下也不会丢失提交事务的操作。</span><br><span class="hljs-code"></span><br><br></code></pre></td></tr></table></figure>
 

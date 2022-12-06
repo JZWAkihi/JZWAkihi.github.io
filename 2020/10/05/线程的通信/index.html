@@ -16,12 +16,12 @@
   <meta name="author" content="John Joy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="线程的其他方法1. 终止线程一般来说线程的执行完毕就会结束，无需手动关闭。但当我们需要手动杀死一个正在运行的线程。可以通过一些方法。 stop方法(废弃)12345# stop()方法不推荐使用因为stop()方法太暴力，会强制杀死线程。这就类似于: 你正在写文档，突然停电，文档没有保存。在程序运行过程中，强制杀死线程，线程还没有来得及保存上下文就结束了。  1234567891011121314">
+    <meta name="description" content="线程的其他方法1. 终止线程一般来说线程的执行完毕就会结束，无需手动关闭。但当我们需要手动杀死一个正在运行的线程。可以通过一些方法。 stop方法(废弃)12345# stop()方法不推荐使用因为stop()方法太暴力，会强制杀死线程。这就类似于: 你正在写文档，突然停电，文档没有保存。在程序运行过程中，强制杀死线程，线程还没有来得及保存上下文就结束了。  12345678910111213">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线程的通信">
 <meta property="og:url" content="http://example.com/2020/10/05/%E7%BA%BF%E7%A8%8B%E7%9A%84%E9%80%9A%E4%BF%A1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="线程的其他方法1. 终止线程一般来说线程的执行完毕就会结束，无需手动关闭。但当我们需要手动杀死一个正在运行的线程。可以通过一些方法。 stop方法(废弃)12345# stop()方法不推荐使用因为stop()方法太暴力，会强制杀死线程。这就类似于: 你正在写文档，突然停电，文档没有保存。在程序运行过程中，强制杀死线程，线程还没有来得及保存上下文就结束了。  1234567891011121314">
+<meta property="og:description" content="线程的其他方法1. 终止线程一般来说线程的执行完毕就会结束，无需手动关闭。但当我们需要手动杀死一个正在运行的线程。可以通过一些方法。 stop方法(废弃)12345# stop()方法不推荐使用因为stop()方法太暴力，会强制杀死线程。这就类似于: 你正在写文档，突然停电，文档没有保存。在程序运行过程中，强制杀死线程，线程还没有来得及保存上下文就结束了。  12345678910111213">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210410174213.png">
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210410195811.png">
@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210411101610.png">
 <meta property="og:image" content="https://gitee.com/Akihij/PicGo/raw/master/img/20210411104919.png">
 <meta property="article:published_time" content="2020-10-05T07:38:36.000Z">
-<meta property="article:modified_time" content="2022-12-06T15:31:38.484Z">
+<meta property="article:modified_time" content="2022-12-06T17:09:29.340Z">
 <meta property="article:author" content="John Joy">
 <meta property="article:tag" content="多线程">
 <meta property="article:tag" content="Java">
@@ -281,7 +281,9 @@
             
               <div class="markdown-body">
                 
-                <h2 id="线程的其他方法"><a href="#线程的其他方法" class="headerlink" title="线程的其他方法"></a>线程的其他方法</h2><h3 id="1-终止线程"><a href="#1-终止线程" class="headerlink" title="1. 终止线程"></a>1. 终止线程</h3><p><code>一般来说线程的执行完毕就会结束，无需手动关闭。但当我们需要手动杀死一个正在运行的线程。可以通过一些方法。</code></p>
+                <meta name="referrer" content="no-referrer" />
+
+<h2 id="线程的其他方法"><a href="#线程的其他方法" class="headerlink" title="线程的其他方法"></a>线程的其他方法</h2><h3 id="1-终止线程"><a href="#1-终止线程" class="headerlink" title="1. 终止线程"></a>1. 终止线程</h3><p><code>一般来说线程的执行完毕就会结束，无需手动关闭。但当我们需要手动杀死一个正在运行的线程。可以通过一些方法。</code></p>
 <h4 id="stop方法-废弃"><a href="#stop方法-废弃" class="headerlink" title="stop方法(废弃)"></a>stop方法(废弃)</h4><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># stop()方法不推荐使用</span><br>因为stop()方法太暴力，会强制杀死线程。<br><br>这就类似于: 你正在写文档，突然停电，文档没有保存。<br>在程序运行过程中，强制杀死线程，线程还没有来得及保存上下文就结束了。<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Demo1</span> &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">Thread</span> <span class="hljs-variable">thread</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>                <span class="hljs-keyword">while</span>(<span class="hljs-literal">true</span>)&#123;<br>                    System.out.println(<span class="hljs-string">&quot;i = &quot;</span> + i);<br>                    i++;<br>                &#125;<br>            &#125;<br>        &#125;);<br><br>        thread.start();<br>        System.out.println(<span class="hljs-string">&quot;线程开始执行&quot;</span>);<br>        <span class="hljs-keyword">try</span> &#123;<br>            Thread.sleep(<span class="hljs-number">100</span>);<br>        &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>            e.printStackTrace();<br>        &#125;<br><br>        thread.stop();<br>        System.out.println();<br>        System.out.println(<span class="hljs-string">&quot;线程结束&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
